@@ -95,7 +95,7 @@
     if (seen === 'done') return;
     var days = parseFloat(d.getAttribute('data-days')) || 7;
     if (seen && Date.now() - parseFloat(seen) < days * 864e5) return;
-    var delay = (parseFloat(d.getAttribute('data-delay')) || 15) * 1000;
+    var delay = (parseFloat(d.getAttribute('data-delay')) || 20) * 1000;
     setTimeout(open, delay);
   }
 
