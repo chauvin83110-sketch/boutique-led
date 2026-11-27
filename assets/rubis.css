@@ -227,6 +227,7 @@
 /* ---------- Mobile ---------- */
 @media (max-width: 799px) {
   .er-hero { min-height: auto; padding-block: 48px 64px; }
+  .er-hero__title { font-size: clamp(28px, 8.3vw, 44px); text-wrap: balance; }
   .er-hero__grid, .er-signs__head, .er-ritual__grid, .er-faq__grid { grid-template-columns: 1fr; }
   .er-hero__media { order: -1; max-width: 240px; width: 100%; margin-inline: auto; }
   .er-hero__glow { inset: -10% -30% 40% -30%; }
@@ -299,7 +300,7 @@
   background: var(--er-champagne); color: var(--er-rubis);
 }
 .er-buy__title { font: 600 15px/1.4 var(--er-sans); letter-spacing: 0.01em; color: var(--er-sub); }
-.er-buy__promise { margin: 14px 0 0; font: italic 500 clamp(23px, 6.2vw, 30px)/1.2 var(--er-serif); color: var(--er-rubis); }
+.er .er-buy__promise { margin: 14px 0 0; font: italic 500 clamp(23px, 6.2vw, 30px)/1.2 var(--er-serif); color: var(--er-rubis); }
 .er-buy__price { margin: 18px 0 0; display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 12px; }
 .er-buy__price strong { font: 600 30px/1 var(--er-sans); color: var(--er-rubis); font-variant-numeric: tabular-nums; }
 .er-buy__price span { font-size: 14px; color: var(--er-sub); }
