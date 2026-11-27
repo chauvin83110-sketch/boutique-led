@@ -10,6 +10,7 @@ Produits, prix, pages légales et réglages restent dans l'admin Shopify. Seul l
 | `assets/rubis.css` | Direction artistique : rose poudré #F7DEDA, rubis #A3122A, chocolat #3A1E19, rose clair #FBEDEA ; titres Cormorant Garamond, texte Montserrat |
 | `assets/rubis-motion.js` | Animations GSAP + ScrollTrigger (voir plus bas) |
 | `assets/gsap.min.js`, `assets/ScrollTrigger.min.js` | GSAP 3.12.5, hébergé avec le thème (pas de CDN externe) |
+| `assets/logo-aube-*.svg`, `assets/icone-aube.svg` | Logo n° 4 « Aube » (à téléverser aussi dans Shopify : Paramètres › Marque, ou réglages du thème › Logo) |
 | `sections/er-hero.liquid` | Héros sombre : la lumière rouge « s'allume », puis le titre apparaît ligne par ligne |
 | `sections/er-signs.liquid` | « Ce n'est pas dans votre tête » : teint, ovale, cou |
 | `sections/er-ritual.liquid` | Rituel de 10 minutes : section épinglée sur ordinateur, le cadran se remplit au défilement |
