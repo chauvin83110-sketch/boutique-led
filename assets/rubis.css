@@ -29,6 +29,7 @@
   font-weight: 500;
   letter-spacing: -0.005em;
   line-height: 1.08;
+  font-variant-numeric: lining-nums;
   margin: 0;
   color: inherit;
 }
@@ -87,7 +88,7 @@
   will-change: opacity, transform;
 }
 .er-hero__title {
-  font-size: clamp(42px, 6.4vw, 92px);
+  font-size: clamp(40px, 4.9vw, 72px);
   font-weight: 400;
 }
 .er-hero__title .er-line { display: block; overflow: hidden; padding-bottom: 0.06em; }
@@ -143,6 +144,7 @@
 }
 .er-ritual__step::before {
   content: counter(step);
+  font-variant-numeric: lining-nums tabular-nums;
   font-family: var(--er-serif);
   font-size: 28px;
   color: var(--er-champagne);
@@ -163,7 +165,8 @@
   text-align: center;
   font-family: var(--er-serif);
 }
-.er-ritual__minutes { font-size: clamp(72px, 9vw, 128px); line-height: 1; font-variant-numeric: tabular-nums; }
+.er-ritual__minutes {
+  font-variant-numeric: lining-nums tabular-nums; font-size: clamp(72px, 9vw, 128px); line-height: 1; font-variant-numeric: tabular-nums; }
 .er-ritual__unit { font-family: var(--er-sans); font-size: 15px; color: var(--er-champagne); margin-top: 8px; }
 
 /* ---------- Comparaison de prix ---------- */
@@ -173,13 +176,15 @@
 .er-compare__col { padding: 32px 32px 32px 0; }
 .er-compare__col + .er-compare__col { padding-left: 32px; border-left: 1px solid var(--er-line); }
 .er-compare__label { font-size: 15px; margin: 0 0 12px; color: var(--er-sub); }
-.er-compare__amount { font-family: var(--er-serif); font-size: clamp(48px, 6vw, 84px); line-height: 1; font-variant-numeric: tabular-nums; }
+.er-compare__amount {
+  font-variant-numeric: lining-nums tabular-nums; font-family: var(--er-serif); font-size: clamp(48px, 6vw, 84px); line-height: 1; font-variant-numeric: tabular-nums; }
 .er-compare__col--us .er-compare__amount { color: var(--er-rubis); }
 .er-compare__note { margin-top: 12px; font-size: 15px; }
 
 /* ---------- Garantie ---------- */
 .er-guarantee { background: var(--er-nuit); color: var(--er-ivoire); padding-block: clamp(64px, 8vw, 110px); text-align: center; }
 .er-guarantee__seal {
+  font-variant-numeric: lining-nums tabular-nums;
   width: 112px; height: 112px; margin: 0 auto 28px;
   border: 1px solid var(--er-champagne); border-radius: 50%;
   display: grid; place-content: center;
@@ -218,7 +223,7 @@
 @media (max-width: 799px) {
   .er-hero { min-height: auto; padding-block: 48px 64px; }
   .er-hero__grid, .er-signs__head, .er-ritual__grid, .er-faq__grid { grid-template-columns: 1fr; }
-  .er-hero__media { order: -1; max-width: 360px; width: 100%; margin-inline: auto; }
+  .er-hero__media { order: -1; max-width: 240px; width: 100%; margin-inline: auto; }
   .er-hero__glow { inset: -10% -30% 40% -30%; }
   .er-signs__list { grid-template-columns: 1fr; margin-top: 36px; }
   .er-ritual__dial { width: min(70vw, 280px); order: -1; }
@@ -235,3 +240,11 @@
   .er-hero__glow { opacity: 0.85 !important; transform: none !important; }
   .er-button { transition: none; }
 }
+
+/* Cormorant Garamond n'a que des chiffres elzéviriens : les grands chiffres passent en Montserrat */
+.er-ritual__step::before,
+.er-ritual__minutes,
+.er-compare__amount,
+.er-guarantee__seal strong { font-family: var(--er-sans); font-weight: 400; letter-spacing: -0.02em; }
+.er-ritual__step::before { font-size: 22px; }
+.er-guarantee__seal strong { font-size: 36px; }
