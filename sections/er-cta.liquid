@@ -11,6 +11,7 @@
   <div class="er__inner">
     <h2 class="er-cta__title" data-er-reveal>{{ section.settings.title | escape }}</h2>
     <a class="er-button er-button--light" href="{{ product_url }}" data-er-reveal>{{ section.settings.button_label | escape }}</a>
+    {%- if section.settings.note != blank -%}<p class="er-cta__note">{{ section.settings.note | escape }}</p>{%- endif -%}
   </div>
 </section>
 
@@ -20,6 +21,7 @@
   "tag": "div",
   "settings": [
     { "type": "product", "id": "product", "label": "Produit du bouton" },
+    { "type": "text", "id": "note", "label": "Mention sous le bouton" },
     { "type": "text", "id": "title", "label": "Titre", "default": "Ce soir, dix minutes pour vous." },
     { "type": "text", "id": "button_label", "label": "Bouton", "default": "Commander le masque, 249 €" }
   ],

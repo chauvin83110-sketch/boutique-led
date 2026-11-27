@@ -131,8 +131,8 @@
         "q1": {
           "type": "question",
           "settings": {
-            "question": "Est-ce que ça marche vraiment ?",
-            "answer": "<p>La lumière rouge et le proche infrarouge sont utilisés en institut depuis des années. Le masque utilise les mêmes lumières (630 et 850 nm).</p><p>Le changement n'est pas immédiat. Il faut des séances régulières pendant plusieurs semaines, et le résultat varie d'une peau à l'autre. C'est pour cela que vous avez 30 jours pour juger sur la vôtre.</p>"
+            "question": "Quand verrai-je des résultats ?",
+            "answer": "<p>La lumière rouge ne fait pas de miracle en une nuit. Elle agit en profondeur, et c'est la régularité qui compte. Dans les études, les premiers changements se mesurent entre 4 et 8 semaines, et ils continuent de progresser jusqu'à 12 à 16 semaines.</p><p>Comptez 10 minutes, 3 à 5 fois par semaine. Prenez une photo le premier jour, dans la même lumière : c'est en comparant que vous verrez la différence.</p>"
           }
         },
         "q2": {
@@ -145,8 +145,8 @@
         "q3": {
           "type": "question",
           "settings": {
-            "question": "Et pour les yeux ?",
-            "answer": "<p>Gardez les yeux fermés pendant la séance. Si vous avez une maladie des yeux, une photosensibilité, un traitement en cours, si vous êtes enceinte ou épileptique, demandez d'abord l'avis de votre médecin.</p>"
+            "question": "Est-ce sans danger ?",
+            "answer": "<p>La lumière LED rouge et infrarouge ne contient pas d'UV et ne chauffe pas la peau. Une revue de 8 études sur les masques à domicile (365 participantes) n'a relevé que des effets indésirables rares, légers et passagers. Une autre revue n'a trouvé aucun lien entre cette lumière et un risque de cancer de la peau.</p><p>Par précaution, demandez l'avis de votre médecin si vous êtes enceinte, si vous prenez un médicament photosensibilisant, si vous avez des antécédents d'épilepsie ou une maladie des yeux. Gardez les yeux fermés pendant la séance.</p>"
           }
         },
         "q4": {
@@ -185,7 +185,8 @@
       "settings": {
         "product": "masque-led-lumiere-rouge-visage-et-cou",
         "title": "Ce soir, dix minutes pour vous.",
-        "button_label": "Commander le masque, 249 €"
+        "button_label": "Commander le masque, 249 €",
+        "note": "Appareil à usage esthétique, sans finalité médicale."
       }
     },
     "essentials": {
@@ -293,11 +294,129 @@
         "t4",
         "t5"
       ]
+    },
+    "menopause": {
+      "type": "er-text",
+      "settings": {
+        "dark": false,
+        "title": "Pourquoi votre peau change autant en ce moment",
+        "text": "<p>Quand les œstrogènes baissent, la peau perd une part importante de son collagène dans les premières années de la ménopause. C'est pour ça que vous avez l'impression que tout s'est accéléré.</p><p>Des chercheurs ont testé un masque à lumière rouge chez 95 femmes de 45 à 60 ans. Après 4 semaines, les rides du front et du contour de l'œil étaient plus courtes qu'avec un faux masque, et 8 femmes sur 10 se disaient satisfaites de leur visage.</p>"
+      }
+    },
+    "science": {
+      "type": "er-text",
+      "settings": {
+        "dark": true,
+        "title": "Ce que la lumière rouge fait à votre peau",
+        "text": "<p>Avec les années, et encore plus à la ménopause, la peau fabrique moins de collagène. Elle devient plus fine, moins ferme, et les rides se creusent.</p><p>La lumière rouge (630 nm) et proche infrarouge (850 nm) pénètre la peau sans la chauffer ni l'abîmer. Elle redonne de l'énergie aux cellules qui fabriquent le collagène et l'élastine. Les chercheurs appellent ça la photobiomodulation. Elle est étudiée depuis plus de 20 ans.</p><p>Le rouge agit en surface, sur l'éclat et le grain de la peau. Le proche infrarouge va plus profond, là où se trouvent les fibres de collagène. C'est pour ça que le masque Éclat Rubis réunit les deux.</p>"
+      }
+    },
+    "stats": {
+      "type": "er-stats",
+      "settings": {
+        "title": "Ce que les études montrent",
+        "title_accent": "sur la lumière rouge",
+        "more_label": "En savoir plus",
+        "sources_title": "D'où viennent ces chiffres ?",
+        "sources_intro": "<p>La lumière rouge et proche infrarouge est étudiée depuis plus de 20 ans par des universités et des dermatologues. Voici les études publiées dont viennent les chiffres de notre page. Elles portent sur la lumière rouge en général, avec différents appareils. Les résultats varient d'une personne à l'autre.</p>",
+        "sources_note": "Le masque Éclat Rubis utilise les longueurs d'onde étudiées (630 nm et 850 nm). Appareil à usage esthétique, sans finalité médicale."
+      },
+      "blocks": {
+        "n1": {
+          "type": "stat",
+          "settings": {
+            "prefix": "−",
+            "number": 30,
+            "suffix": " %",
+            "text": "de volume des rides autour des yeux, en 4 semaines, chez 137 femmes de 40 à 65 ans."
+          }
+        },
+        "n2": {
+          "type": "stat",
+          "settings": {
+            "prefix": "",
+            "number": 86,
+            "suffix": " %",
+            "text": "des utilisatrices ont vu leurs pattes d'oie s'améliorer en 16 semaines, avec un masque 630 + 850 nm, contre un faux masque."
+          }
+        },
+        "n3": {
+          "type": "stat",
+          "settings": {
+            "prefix": "+",
+            "number": 19,
+            "suffix": " %",
+            "text": "d'élasticité et plus de fibres de collagène observées, avec le rouge et l'infrarouge combinés."
+          }
+        },
+        "o1": {
+          "type": "source",
+          "settings": {
+            "claim": "−30 % de volume des rides autour des yeux en 4 semaines.",
+            "detail": "Essai randomisé, 137 femmes de 40 à 65 ans, lumière 660 nm. Mota et al., Photobiomodulation, Photomedicine and Laser Surgery, 2023.",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/36780572/"
+          }
+        },
+        "o2": {
+          "type": "source",
+          "settings": {
+            "claim": "86 % des pattes d'oie améliorées en 16 semaines.",
+            "detail": "Essai randomisé en double aveugle contre un faux masque, 60 personnes, 630 + 850 nm. Park et al., Medicine, 2025.",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/39960921/"
+          }
+        },
+        "o3": {
+          "type": "source",
+          "settings": {
+            "claim": "Jusqu'à −36 % de rides et +19 % d'élasticité, plus de fibres de collagène.",
+            "detail": "Essai randomisé en double aveugle, 76 personnes, 633 et 830 nm. Lee et al., Journal of Photochemistry and Photobiology B, 2007.",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/17566756/"
+          }
+        },
+        "o4": {
+          "type": "source",
+          "settings": {
+            "claim": "8 femmes sur 10 satisfaites de leur visage.",
+            "detail": "Essai randomisé en double aveugle, 95 femmes de 45 à 60 ans, 660 nm. Bragato et al., Lasers in Medical Science, 2025.",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/40167796/"
+          }
+        },
+        "o5": {
+          "type": "source",
+          "settings": {
+            "claim": "Densité de collagène en hausse.",
+            "detail": "Essai contrôlé, 136 volontaires. Wunsch et Matuschka, Photomedicine and Laser Surgery, 2014.",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/24286286/"
+          }
+        },
+        "o6": {
+          "type": "source",
+          "settings": {
+            "claim": "Sûr et bien toléré.",
+            "detail": "Revue de 8 études sur les masques à domicile, 365 participants. Das et al., Aesthetic Plastic Surgery, 2026.",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/42875609/"
+          }
+        }
+      },
+      "block_order": [
+        "n1",
+        "n2",
+        "n3",
+        "o1",
+        "o2",
+        "o3",
+        "o4",
+        "o5",
+        "o6"
+      ]
     }
   },
   "order": [
     "hero",
     "signs",
+    "menopause",
+    "science",
+    "stats",
     "essentials",
     "ritual",
     "compare",

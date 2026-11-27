@@ -1,0 +1,19 @@
+<section class="er er-text{% if section.settings.dark %} er-text--dark{% endif %}">
+  <div class="er__inner er-text__grid">
+    <h2 class="er-text__title" data-er-reveal>{{ section.settings.title | escape }}</h2>
+    <div class="er-text__body" data-er-reveal>{{ section.settings.text }}</div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Éclat Rubis : texte",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Titre", "default": "Ce que la lumière rouge fait à votre peau" },
+    { "type": "richtext", "id": "text", "label": "Texte", "default": "<p>Texte.</p>" },
+    { "type": "checkbox", "id": "dark", "label": "Fond chocolat", "default": false }
+  ],
+  "presets": [{ "name": "Éclat Rubis : texte" }]
+}
+{% endschema %}

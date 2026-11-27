@@ -1,0 +1,80 @@
+<section class="er er-stats">
+  <div class="er__inner">
+    <h2 class="er-stats__title" data-er-reveal>{{ section.settings.title | escape }} <em>{{ section.settings.title_accent | escape }}</em></h2>
+    <ul class="er-stats__list" data-er-stagger>
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'stat' -%}
+          <li class="er-stat" {{ block.shopify_attributes }}>
+            <p class="er-stat__figure">{{ block.settings.prefix | escape }}<span data-er-count="{{ block.settings.number }}">{{ block.settings.number }}</span>{{ block.settings.suffix | escape }}</p>
+            <p class="er-stat__text">{{ block.settings.text | escape }}</p>
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+    {%- if section.settings.more_label != blank -%}
+      <button type="button" class="er-stats__more" data-er-dialog-open="ErSources-{{ section.id }}">{{ section.settings.more_label | escape }} <span aria-hidden="true">→</span></button>
+    {%- endif -%}
+  </div>
+
+  <dialog class="er-dialog" id="ErSources-{{ section.id }}" aria-labelledby="ErSourcesTitle-{{ section.id }}">
+    <div class="er-dialog__inner">
+      <button type="button" class="er-dialog__close" data-er-dialog-close aria-label="Fermer">×</button>
+      <h2 id="ErSourcesTitle-{{ section.id }}">{{ section.settings.sources_title | escape }}</h2>
+      <div class="er-dialog__intro">{{ section.settings.sources_intro }}</div>
+      <ul class="er-dialog__list">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'source' -%}
+            <li {{ block.shopify_attributes }}>
+              <strong>{{ block.settings.claim | escape }}</strong>
+              <span>{{ block.settings.detail | escape }}</span>
+              {%- if block.settings.url != blank -%}
+                <a href="{{ block.settings.url }}" target="_blank" rel="noopener nofollow">Voir l'étude</a>
+              {%- endif -%}
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+      {%- if section.settings.sources_note != blank -%}
+        <p class="er-dialog__note">{{ section.settings.sources_note | escape }}</p>
+      {%- endif -%}
+    </div>
+  </dialog>
+</section>
+
+{% schema %}
+{
+  "name": "Éclat Rubis : chiffres",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Titre", "default": "Ce que les études montrent" },
+    { "type": "text", "id": "title_accent", "label": "Titre : mots en rubis", "default": "sur la lumière rouge" },
+    { "type": "text", "id": "more_label", "label": "Lien sous les chiffres", "default": "En savoir plus" },
+    { "type": "header", "content": "Fenêtre « En savoir plus »" },
+    { "type": "text", "id": "sources_title", "label": "Titre", "default": "D'où viennent ces chiffres ?" },
+    { "type": "richtext", "id": "sources_intro", "label": "Introduction", "default": "<p>Voici les études publiées dont viennent les chiffres de notre page.</p>" },
+    { "type": "textarea", "id": "sources_note", "label": "Note de fin" }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Chiffre",
+      "settings": [
+        { "type": "text", "id": "prefix", "label": "Avant le nombre" },
+        { "type": "number", "id": "number", "label": "Nombre", "default": 30 },
+        { "type": "text", "id": "suffix", "label": "Après le nombre", "default": " %" },
+        { "type": "textarea", "id": "text", "label": "Texte", "default": "Texte." }
+      ]
+    },
+    {
+      "type": "source",
+      "name": "Étude",
+      "settings": [
+        { "type": "text", "id": "claim", "label": "Résultat", "default": "Résultat." },
+        { "type": "textarea", "id": "detail", "label": "Détail de l'étude", "default": "Détail." },
+        { "type": "url", "id": "url", "label": "Lien vers l'étude" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Éclat Rubis : chiffres" }]
+}
+{% endschema %}

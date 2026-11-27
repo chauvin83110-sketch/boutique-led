@@ -61,7 +61,19 @@
     });
   }
 
+  function initDialogs() {
+    document.querySelectorAll('[data-er-dialog-open]').forEach(function (btn) {
+      var d = document.getElementById(btn.getAttribute('data-er-dialog-open'));
+      if (!d || !d.showModal) { btn.hidden = true; return; }
+      btn.addEventListener('click', function () { d.showModal(); });
+      d.addEventListener('click', function (ev) {
+        if (ev.target === d || ev.target.closest('[data-er-dialog-close]')) d.close();
+      });
+    });
+  }
+
   ready(function () {
+    initDialogs();
     initGallery();
     initSticky();
     if (!window.gsap || !window.ScrollTrigger) {

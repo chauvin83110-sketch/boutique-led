@@ -373,7 +373,7 @@
 .er-sticky .er-button { min-height: 46px; padding: 0 24px; font-size: 15px; font-weight: 600; flex: none; }
 
 /* L'essentiel : quatre cartes */
-.er-essentials { padding-block: clamp(56px, 9vw, 120px); }
+.er-essentials { padding-block: 0 clamp(56px, 9vw, 120px); }
 .er-essentials__title, .er-table__title { font-size: clamp(32px, 4.4vw, 60px); }
 .er-essentials__list { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 12px; }
 .er-card { background: #fff; border-radius: 22px; padding: 22px; border: 1px solid var(--er-line); }
@@ -394,6 +394,63 @@
 .er-table .er-table__us { background: var(--er-rubis); color: var(--er-ivoire); font-weight: 600; }
 .er-table thead .er-table__us { color: var(--er-ivoire); font-family: var(--er-serif); font-size: 19px; font-weight: 600; }
 .er-table__note { margin: 14px 0 0; font-size: 13px; color: var(--er-sub); }
+
+/* Texte explicatif (science, ménopause) */
+.er-text { padding-block: clamp(56px, 9vw, 120px); }
+.er-text--dark { background: var(--er-nuit); color: var(--er-ivoire); }
+.er-text__grid { display: grid; gap: 20px; }
+.er-text__title { font-size: clamp(32px, 4.4vw, 60px); color: var(--er-rubis); }
+.er-text--dark .er-text__title { color: var(--er-champagne); }
+.er-text__body p { margin: 0 0 14px; font-size: 16.5px; }
+.er-text__body p:last-child { margin-bottom: 0; }
+.er-text--dark .er-text__body { color: rgba(251, 237, 234, 0.85); }
+
+/* Chiffres des études */
+.er-stats { padding-block: clamp(56px, 9vw, 120px); }
+.er-stats__title { font-size: clamp(32px, 4.4vw, 60px); }
+.er-stats__list { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 12px; }
+.er-stat { background: var(--er-rubis); color: var(--er-ivoire); border-radius: 22px; padding: 24px 22px; }
+.er .er-stat__figure { margin: 0 0 10px; font: 600 clamp(48px, 13vw, 64px)/1 var(--er-sans); letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.er .er-stat__text { margin: 0; font-size: 15.5px; line-height: 1.5; color: rgba(251, 237, 234, 0.9); }
+.er-stats__more {
+  margin-top: 18px; padding: 12px 0; min-height: 48px; background: none; border: 0; cursor: pointer;
+  font: 600 15.5px/1 var(--er-sans); color: var(--er-rubis); text-decoration: underline; text-underline-offset: 4px;
+}
+.er-stats__more span { display: inline-block; transition: transform 250ms var(--er-ease); }
+.er-stats__more:hover span { transform: translateX(4px); }
+
+.er-dialog {
+  width: min(680px, 100%); max-width: 100%; max-height: 88svh; margin: auto auto 0; padding: 0; border: 0;
+  border-radius: 24px 24px 0 0; background: var(--er-ivoire); color: var(--er-encre); font-family: var(--er-sans);
+  overscroll-behavior: contain;
+}
+.er-dialog::backdrop { background: rgba(58, 30, 25, 0.55); }
+.er-dialog__inner { padding: 28px 20px calc(28px + env(safe-area-inset-bottom)); position: relative; }
+.er-dialog h2 { font: 500 30px/1.1 var(--er-serif); margin: 0 44px 14px 0; color: var(--er-rubis); }
+.er-dialog__close {
+  position: absolute; top: 14px; right: 12px; width: 44px; height: 44px; border: 0; border-radius: 50%;
+  background: var(--er-champagne); color: var(--er-rubis); font-size: 24px; line-height: 1; cursor: pointer;
+}
+.er-dialog__intro p { margin: 0 0 12px; font-size: 15px; line-height: 1.55; max-width: none; }
+.er-dialog__list { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 0; }
+.er-dialog__list li { display: grid; gap: 4px; padding: 14px 0; border-top: 1px solid var(--er-line); font-size: 14.5px; line-height: 1.5; }
+.er-dialog__list strong { font-weight: 600; }
+.er-dialog__list span { color: var(--er-sub); }
+.er-dialog__list a { color: var(--er-rubis); font-weight: 500; }
+.er .er-dialog__note, .er-dialog__note { margin: 14px 0 0; font-size: 13px; font-style: italic; color: var(--er-sub); max-width: none; }
+.er .er-cta__note { margin: 22px auto 0; font-size: 12.5px; color: rgba(251, 237, 234, 0.75); }
+@media (prefers-reduced-motion: no-preference) {
+  .er-dialog[open] { animation: er-sheet 350ms var(--er-ease); }
+  .er-dialog[open]::backdrop { animation: er-fade 350ms var(--er-ease); }
+}
+@keyframes er-sheet { from { transform: translateY(40px); opacity: 0; } }
+@keyframes er-fade { from { opacity: 0; } }
+@media (min-width: 800px) {
+  .er-text__grid { grid-template-columns: 1fr 1fr; gap: clamp(24px, 5vw, 80px); align-items: start; }
+  .er-stats__list { grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
+  .er-dialog { margin: auto; border-radius: 24px; }
+  .er-dialog__inner { padding: 36px; }
+}
 
 /* Téléphone : sections existantes plus compactes, zones tactiles confortables */
 @media (max-width: 799px) {
