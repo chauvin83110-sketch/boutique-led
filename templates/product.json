@@ -321,8 +321,7 @@
         "days": 30,
         "title": "Essayez-le pendant 30 jours.",
         "text": "<p>Utilisez le masque chez vous pendant un mois. S'il ne vous convient pas, écrivez-nous et renvoyez-le : nous vous remboursons. Ces 30 jours s'ajoutent aux 14 jours de rétractation prévus par la loi.</p>",
-        "link_label": "Lire la politique de retour",
-        "link": "/policies/refund-policy"
+        "link_label": "Lire la politique de retour"
       }
     },
     "faq": {
