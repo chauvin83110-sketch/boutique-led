@@ -55,14 +55,24 @@
     {% endif %}
     data-testid="header-logo"
   >
-    {% render 'image',
-      image: settings.logo,
-      class: 'header-logo__image',
-      height: settings.logo_height,
-      alt_text_fallback: alt_text_fallback,
-      text_fallback: shop.name,
-      style: logo_style
-    %}
+    {%- if settings.logo == blank -%}
+      {%- comment -%} Éclat Rubis : logo Aube livré avec le thème tant qu'aucun logo n'est choisi dans l'admin {%- endcomment -%}
+      <img
+        class="header-logo__image er-logo"
+        src="{{ 'eclat-rubis-logo-horizontal-couleur.svg' | asset_url }}"
+        alt="{{ shop.name | escape }}"
+        style="height: {{ settings.logo_height | default: 40 }}px; width: auto;"
+      >
+    {%- else -%}
+      {% render 'image',
+        image: settings.logo,
+        class: 'header-logo__image',
+        height: settings.logo_height,
+        alt_text_fallback: alt_text_fallback,
+        text_fallback: shop.name,
+        style: logo_style
+      %}
+    {%- endif -%}
   </span>
 
   {% if use_inverse_logo %}
