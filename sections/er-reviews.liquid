@@ -1,0 +1,69 @@
+<section class="er er-reviews">
+  <div class="er__inner">
+    <h2 class="er-reviews__title" data-er-reveal>{{ section.settings.title | escape }} <em>{{ section.settings.title_accent | escape }}</em></h2>
+    <p class="er-reviews__origin">
+      {{ section.settings.origin | escape }}
+      {%- if section.settings.more_label != blank %}
+        <button type="button" class="er-reviews__more" data-er-dialog-open="ErReviews-{{ section.id }}">{{ section.settings.more_label | escape }}</button>
+      {%- endif -%}
+    </p>
+    {%- if section.settings.score != blank -%}
+      <p class="er-reviews__score">
+        <span class="er-reviews__stars" aria-hidden="true">★★★★★</span>
+        <strong>{{ section.settings.score | escape }}</strong>
+        <span>{{ section.settings.score_note | escape }}</span>
+      </p>
+    {%- endif -%}
+    <ul class="er-reviews__list" data-er-stagger>
+      {%- for block in section.blocks -%}
+        <li class="er-review" {{ block.shopify_attributes }}>
+          <p class="er-review__stars" role="img" aria-label="{{ block.settings.stars }} étoiles sur 5">
+            {%- for i in (1..5) -%}
+              {%- if i <= block.settings.stars -%}<span>★</span>{%- else -%}<span class="is-off">★</span>{%- endif -%}
+            {%- endfor -%}
+          </p>
+          <blockquote class="er-review__text">{{ block.settings.text | escape }}</blockquote>
+          <p class="er-review__meta">{{ block.settings.meta | escape }}</p>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+
+  <dialog class="er-dialog" id="ErReviews-{{ section.id }}" aria-labelledby="ErReviewsTitle-{{ section.id }}">
+    <div class="er-dialog__inner">
+      <button type="button" class="er-dialog__close" data-er-dialog-close aria-label="Fermer">×</button>
+      <h2 id="ErReviewsTitle-{{ section.id }}">{{ section.settings.dialog_title | escape }}</h2>
+      <div class="er-dialog__intro">{{ section.settings.dialog_text }}</div>
+    </div>
+  </dialog>
+</section>
+
+{% schema %}
+{
+  "name": "Éclat Rubis : avis",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Titre", "default": "Ce qu'en disent" },
+    { "type": "text", "id": "title_accent", "label": "Titre : mots en rubis", "default": "celles et ceux qui l'utilisent" },
+    { "type": "text", "id": "origin", "label": "Origine des avis (toujours affichée)", "default": "Avis d'acheteurs du même masque, recueillis par le fabricant." },
+    { "type": "text", "id": "more_label", "label": "Lien", "default": "En savoir plus" },
+    { "type": "text", "id": "score", "label": "Note", "default": "4,9 sur 5" },
+    { "type": "text", "id": "score_note", "label": "Précision sous la note", "default": "60 avis sur la boutique du fabricant" },
+    { "type": "header", "content": "Fenêtre « En savoir plus »" },
+    { "type": "text", "id": "dialog_title", "label": "Titre", "default": "D'où viennent ces avis ?" },
+    { "type": "richtext", "id": "dialog_text", "label": "Texte", "default": "<p>Ces avis viennent de la boutique du fabricant.</p>" }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Avis",
+      "settings": [
+        { "type": "range", "id": "stars", "label": "Étoiles", "min": 1, "max": 5, "step": 1, "default": 5 },
+        { "type": "textarea", "id": "text", "label": "Texte de l'avis", "default": "Texte de l'avis." },
+        { "type": "text", "id": "meta", "label": "Pays, date, traduction", "default": "France, juin 2026" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Éclat Rubis : avis" }]
+}
+{% endschema %}

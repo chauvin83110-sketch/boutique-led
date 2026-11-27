@@ -502,3 +502,37 @@
 .er-guarantee__seal strong { font-family: var(--er-sans); font-weight: 400; letter-spacing: -0.02em; }
 .er-ritual__step::before { font-size: 22px; }
 .er-guarantee__seal strong { font-size: 36px; }
+
+/* ---- Avis (origine toujours affichée sous le titre) ---- */
+.er-reviews { padding-block: clamp(56px, 9vw, 120px); }
+.er-reviews__title { font-size: clamp(32px, 4.4vw, 60px); }
+.er .er-reviews__origin { margin: 12px 0 0; font-size: 13px; line-height: 1.5; color: var(--er-sub); max-width: none; }
+.er-reviews__more {
+  appearance: none; background: none; border: 0; padding: 0; margin-left: 2px; cursor: pointer;
+  font: inherit; color: var(--er-sub); text-decoration: underline; text-underline-offset: 3px;
+}
+.er-reviews__more:hover { color: var(--er-rubis); }
+.er .er-reviews__score { margin: 22px 0 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; font-size: 14px; color: var(--er-sub); max-width: none; }
+.er-reviews__score strong { font: 600 22px/1 var(--er-sans); color: var(--er-encre); font-variant-numeric: tabular-nums; }
+.er-reviews__stars, .er-review__stars { color: var(--er-rubis); letter-spacing: 2px; }
+.er-reviews__list {
+  list-style: none; margin: 24px calc(var(--er-gutter) * -1) 0; padding: 0 var(--er-gutter) 8px;
+  display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--er-gutter);
+  -webkit-overflow-scrolling: touch; scrollbar-width: none;
+}
+.er-reviews__list::-webkit-scrollbar { display: none; }
+.er-review {
+  flex: 0 0 82%; max-width: 340px; scroll-snap-align: start;
+  background: #fff; border: 1px solid var(--er-line); border-radius: 22px; padding: 22px 20px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.er .er-review__stars { margin: 0; font-size: 16px; line-height: 1; }
+.er-review__stars .is-off { color: var(--er-line); }
+.er-review__text { margin: 0; padding: 0; border: 0; font: 400 15.5px/1.55 var(--er-sans); color: var(--er-encre); quotes: '«\00a0' '\00a0»'; }
+.er-review__text::before { content: open-quote; }
+.er-review__text::after { content: close-quote; }
+.er .er-review__meta { margin: auto 0 0; font-size: 13px; color: var(--er-sub); }
+@media (min-width: 900px) {
+  .er-reviews__list { margin-inline: 0; padding-inline: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; overflow: visible; margin-top: 40px; }
+  .er-review { max-width: none; }
+}

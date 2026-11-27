@@ -505,6 +505,104 @@
         "o5",
         "o6"
       ]
+    },
+    "reviews": {
+      "type": "er-reviews",
+      "blocks": {
+        "r1": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "text": "J'aime beaucoup. Je l'ai essayé et il est confortable sur le visage. Je ne l'ai utilisé que deux fois, donc il est trop tôt pour voir les résultats, mais il semble très complet avec ses fonctions infrarouge, rouge, bleue et ambrée. La fréquence semble tout à fait appropriée. Je pense que c'est un bon achat.",
+            "meta": "Espagne, juin 2026. Traduit de l'espagnol"
+          }
+        },
+        "r2": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "text": "Il semble de bonne qualité et niveau performance il coche l'essentiel pour être bénéfique à raison de plusieurs séances par semaine. Ce n'est pas un gadget c'est un appareil qui peu améliorer s'il est bien utiliser. Pour un début il est tout à fait convenable",
+            "meta": "France, juin 2026"
+          }
+        },
+        "r3": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "text": "C'est très simple à utiliser. Je ressens la chaleur et je m'y habitue car ma peau est très réactive, donc j'augmente petit à petit le temps et la puissance, parfois je m'endors même.",
+            "meta": "États-Unis, juillet 2026. Traduit de l'anglais"
+          }
+        },
+        "r4": {
+          "type": "review",
+          "settings": {
+            "stars": 3,
+            "text": "Je ne l'utilise que depuis quelques jours, mais c'est très confortable. On ne voit aucune lumière, les protections en silicone recouvrent parfaitement la zone des yeux.",
+            "meta": "Australie, juillet 2026. Traduit de l'anglais"
+          }
+        },
+        "r5": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "text": "Masque de qualité. A noter, ne traite pas sous les yeux, la protection occulaire étant large. Envoi rapide et soigné.",
+            "meta": "France, novembre 2026"
+          }
+        },
+        "r6": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "text": "Il semble que le matériau soit de très bonne qualité ; le masque est fait d'une sorte de silicone qui se connecte au panneau de contrôle pour choisir le type de lumières et la durée. J'ai vraiment aimé ; il est livré dans une très belle boîte avec son manuel et un sac en velours pour le rangement. J'espère voir les résultats dans quelques mois.",
+            "meta": "Chili, juillet 2026. Traduit de l'espagnol"
+          }
+        },
+        "r7": {
+          "type": "review",
+          "settings": {
+            "stars": 1,
+            "text": "Malheureusement, la batterie est assez faible et ne correspond pas aux performances annoncées sur le site web/dans la description.",
+            "meta": "Allemagne, avril 2026. Traduit de l'allemand"
+          }
+        },
+        "r8": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "text": "C'est le deuxième que j'achète pour offrir, très bon produit complet et de qualité. la batterie tient jusqu'à 4 séances de 20 minutes donc top.",
+            "meta": "France, mai 2026"
+          }
+        },
+        "r9": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "text": "Il est arrivé très rapidement, élégamment emballé, de qualité supérieure, et sent divinement bon. Après l'avoir utilisé, on sent les différences sur la peau :)",
+            "meta": "Pologne, avril 2026. Traduit du polonais"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7",
+        "r8",
+        "r9"
+      ],
+      "settings": {
+        "title": "Ce qu'en disent",
+        "title_accent": "celles et ceux qui l'utilisent",
+        "origin": "Avis d'acheteurs du même masque, recueillis par le fabricant.",
+        "more_label": "En savoir plus",
+        "score": "4,9 sur 5",
+        "score_note": "60 avis sur la boutique du fabricant, au 27 novembre 2026",
+        "dialog_title": "D'où viennent ces avis ?",
+        "dialog_text": "<p>Notre boutique vient d'ouvrir. Nous n'avons pas encore d'avis de nos propres clientes.</p><p>Les avis affichés ici ont été laissés par des acheteurs du même masque sur la boutique en ligne de son fabricant. Ce ne sont pas des avis de clientes Éclat Rubis, et nous ne les avons pas vérifiés nous-mêmes.</p><p>Nous les reprenons tels quels, sans rien ajouter. Ceux qui étaient écrits dans une autre langue sont traduits. Nous affichons aussi les avis moins bons.</p><p>La note de 4,9 sur 5 est celle affichée par le fabricant pour 60 avis, relevée le 27 novembre 2026.</p><p>Dès que nos clientes nous donneront leur avis, il prendra la place de ceux-ci.</p>"
+      }
     }
   },
   "order": [
@@ -515,6 +613,7 @@
     "stats",
     "essentials",
     "ritual",
+    "reviews",
     "compare",
     "table",
     "guarantee",
