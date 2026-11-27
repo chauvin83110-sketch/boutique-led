@@ -7,7 +7,7 @@ Produits, prix, pages légales et réglages restent dans l'admin Shopify. Seul l
 ## Ce qui a été ajouté à Horizon
 | Fichier | Rôle |
 |---|---|
-| `assets/rubis.css` | Direction artistique : rubis #8C1C2B, or champagne #C9A27E, ivoire #F6EEE7, nuit #1E0B0F ; titres Bodoni Moda, texte Jost |
+| `assets/rubis.css` | Direction artistique : rose poudré #F7DEDA, rubis #A3122A, chocolat #3A1E19, rose clair #FBEDEA ; titres Cormorant Garamond, texte Montserrat |
 | `assets/rubis-motion.js` | Animations GSAP + ScrollTrigger (voir plus bas) |
 | `assets/gsap.min.js`, `assets/ScrollTrigger.min.js` | GSAP 3.12.5, hébergé avec le thème (pas de CDN externe) |
 | `sections/er-hero.liquid` | Héros sombre : la lumière rouge « s'allume », puis le titre apparaît ligne par ligne |

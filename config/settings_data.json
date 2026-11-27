@@ -11,10 +11,10 @@
   "current": {
     "logo_height": 36,
     "logo_height_mobile": 28,
-    "type_body_font": "jost_n4",
-    "type_subheading_font": "jost_n5",
-    "type_heading_font": "bodoni_moda_n4",
-    "type_accent_font": "bodoni_moda_n5",
+    "type_body_font": "montserrat_n4",
+    "type_subheading_font": "montserrat_n5",
+    "type_heading_font": "cormorant_n5",
+    "type_accent_font": "cormorant_n6",
     "type_size_paragraph": "14",
     "type_line_height_paragraph": "body-loose",
     "type_font_h1": "heading",
@@ -77,11 +77,11 @@
     "palette_input_border": "{{ settings.color_palette.color3 }}",
     "palette_variant_border": "{{ settings.color_palette.color3 }}",
     "color_palette": {
-      "background": "#F6EEE7",
-      "foreground": "#33232A",
-      "color1": "#8C1C2B",
-      "color2": "#C9A27E",
-      "color3": "#1E0B0F"
+      "background": "#FBEDEA",
+      "foreground": "#3A1E19",
+      "color1": "#A3122A",
+      "color2": "#F7DEDA",
+      "color3": "#7A4F49"
     }
   },
   "presets": {

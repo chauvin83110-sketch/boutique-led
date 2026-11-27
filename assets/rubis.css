@@ -1,18 +1,20 @@
 /* Éclat Rubis : direction artistique
-   Palette : rubis #8C1C2B, or champagne #C9A27E, ivoire #F6EEE7, nuit (lumière éteinte) #1E0B0F.
-   Typo : Bodoni Moda pour les titres, Jost pour le texte.
+   Palette validée : rose poudré #F7DEDA, rubis #A3122A, chocolat #3A1E19 (+ rose clair #FBEDEA, texte secondaire #7A4F49).
+   Typo : Cormorant Garamond pour les titres, Montserrat pour le texte.
    Motion « Premium » : 350 à 600 ms, une seule courbe, pas de rebond. */
 
 :root {
-  --er-rubis: #8c1c2b;
-  --er-rubis-vif: #c22a3c;
-  --er-champagne: #c9a27e;
-  --er-ivoire: #f6eee7;
-  --er-nuit: #1e0b0f;
-  --er-encre: #33232a;
+  --er-rubis: #a3122a;
+  --er-rubis-vif: #c21b37;
+  --er-champagne: #f7deda; /* rose poudré : accents sur fonds sombres */
+  --er-ivoire: #fbedea;    /* rose clair : fond des pages */
+  --er-nuit: #3a1e19;      /* chocolat : fonds sombres */
+  --er-encre: #3a1e19;
+  --er-sub: #7a4f49;
+  --er-line: #ecc9c3;
   --er-ease: cubic-bezier(0.4, 0, 0.2, 1);
-  --er-serif: 'Bodoni Moda', 'Didot', Georgia, serif;
-  --er-sans: 'Jost', 'Futura', system-ui, sans-serif;
+  --er-serif: 'Cormorant Garamond', Garamond, Georgia, serif;
+  --er-sans: 'Montserrat', system-ui, sans-serif;
   --er-gutter: clamp(16px, 5vw, 64px);
 }
 
@@ -24,8 +26,8 @@
 }
 .er :where(h1, h2, h3) {
   font-family: var(--er-serif);
-  font-weight: 400;
-  letter-spacing: -0.01em;
+  font-weight: 500;
+  letter-spacing: -0.005em;
   line-height: 1.08;
   margin: 0;
   color: inherit;
@@ -78,7 +80,7 @@
   position: absolute;
   inset: -20% -10% -20% 30%;
   background:
-    radial-gradient(closest-side, rgba(194, 42, 60, 0.75), rgba(140, 28, 43, 0.35) 45%, transparent 75%);
+    radial-gradient(closest-side, rgba(194, 27, 55, 0.75), rgba(163, 18, 42, 0.35) 45%, transparent 75%);
   filter: blur(20px);
   opacity: 0.85;
   pointer-events: none;
@@ -90,7 +92,7 @@
 }
 .er-hero__title .er-line { display: block; overflow: hidden; padding-bottom: 0.06em; }
 .er-hero__title .er-line > span { display: inline-block; }
-.er-hero__text { margin: 28px 0 36px; font-size: 18px; color: rgba(246, 238, 231, 0.82); }
+.er-hero__text { margin: 28px 0 36px; font-size: 18px; color: rgba(251, 237, 234, 0.82); }
 .er-hero__proof {
   margin-top: 28px;
   display: flex;
@@ -108,7 +110,7 @@
   object-fit: cover;
   border-radius: 200px 200px 24px 24px;
 }
-.er-hero__media svg { background: rgba(246, 238, 231, 0.06); fill: rgba(246, 238, 231, 0.25); }
+.er-hero__media svg { background: rgba(251, 237, 234, 0.06); fill: rgba(251, 237, 234, 0.25); }
 
 /* ---------- Ce n'est pas dans votre tête ---------- */
 .er-signs { padding-block: clamp(72px, 10vw, 140px); }
@@ -122,7 +124,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
-.er-signs__item { border-top: 1px solid var(--er-champagne); padding-top: 20px; }
+.er-signs__item { border-top: 1px solid var(--er-line); padding-top: 20px; }
 .er-signs__item h3 { font-size: 26px; margin-bottom: 10px; }
 .er-signs__item p { margin: 0; }
 
@@ -146,12 +148,12 @@
   color: var(--er-champagne);
 }
 .er-ritual__step h3 { font-family: var(--er-sans); font-weight: 500; font-size: 18px; margin-bottom: 4px; }
-.er-ritual__step p { margin: 0; color: rgba(246, 238, 231, 0.8); }
+.er-ritual__step p { margin: 0; color: rgba(251, 237, 234, 0.8); }
 .er-ritual.is-scrubbing .er-ritual__step { opacity: 0.4; }
 .er-ritual.is-scrubbing .er-ritual__step.is-active { opacity: 1; }
 .er-ritual__dial { position: relative; width: min(100%, 420px); aspect-ratio: 1; margin-inline: auto; }
 .er-ritual__dial svg { width: 100%; height: 100%; transform: rotate(-90deg); }
-.er-ritual__track { fill: none; stroke: rgba(246, 238, 231, 0.18); stroke-width: 2; }
+.er-ritual__track { fill: none; stroke: rgba(251, 237, 234, 0.18); stroke-width: 2; }
 .er-ritual__arc { fill: none; stroke: var(--er-champagne); stroke-width: 3; stroke-linecap: round; }
 .er-ritual__time {
   position: absolute;
@@ -167,10 +169,10 @@
 /* ---------- Comparaison de prix ---------- */
 .er-compare { padding-block: clamp(72px, 10vw, 140px); }
 .er-compare__title { font-size: clamp(34px, 4.4vw, 60px); color: var(--er-rubis); max-width: 18ch; }
-.er-compare__grid { margin-top: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--er-champagne); }
+.er-compare__grid { margin-top: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--er-line); }
 .er-compare__col { padding: 32px 32px 32px 0; }
-.er-compare__col + .er-compare__col { padding-left: 32px; border-left: 1px solid var(--er-champagne); }
-.er-compare__label { font-size: 15px; margin: 0 0 12px; }
+.er-compare__col + .er-compare__col { padding-left: 32px; border-left: 1px solid var(--er-line); }
+.er-compare__label { font-size: 15px; margin: 0 0 12px; color: var(--er-sub); }
 .er-compare__amount { font-family: var(--er-serif); font-size: clamp(48px, 6vw, 84px); line-height: 1; font-variant-numeric: tabular-nums; }
 .er-compare__col--us .er-compare__amount { color: var(--er-rubis); }
 .er-compare__note { margin-top: 12px; font-size: 15px; }
@@ -186,13 +188,13 @@
 .er-guarantee__seal strong { font-size: 44px; font-weight: 400; display: block; }
 .er-guarantee__seal span { font-family: var(--er-sans); font-size: 13px; }
 .er-guarantee__title { font-size: clamp(32px, 4vw, 52px); }
-.er-guarantee p { margin: 20px auto 32px; color: rgba(246, 238, 231, 0.8); }
+.er-guarantee p { margin: 20px auto 32px; color: rgba(251, 237, 234, 0.8); }
 
 /* ---------- Questions ---------- */
 .er-faq { padding-block: clamp(64px, 8vw, 120px); }
 .er-faq__grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(24px, 6vw, 96px); }
 .er-faq__title { font-size: clamp(32px, 4vw, 52px); color: var(--er-rubis); }
-.er-faq details { border-bottom: 1px solid rgba(140, 28, 43, 0.25); }
+.er-faq details { border-bottom: 1px solid var(--er-line); }
 .er-faq summary {
   list-style: none; cursor: pointer;
   display: flex; justify-content: space-between; gap: 16px;
@@ -222,7 +224,7 @@
   .er-ritual__dial { width: min(70vw, 280px); order: -1; }
   .er-compare__grid { grid-template-columns: 1fr; }
   .er-compare__col, .er-compare__col + .er-compare__col { padding: 24px 0; border-left: 0; }
-  .er-compare__col + .er-compare__col { border-top: 1px solid var(--er-champagne); }
+  .er-compare__col + .er-compare__col { border-top: 1px solid var(--er-line); }
 }
 
 /* Avant que le script prenne la main : éléments animés cachés seulement si JS et mouvement autorisés */
