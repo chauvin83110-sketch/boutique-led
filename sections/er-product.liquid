@@ -1,0 +1,183 @@
+{%- liquid
+  assign variant = product.selected_or_first_available_variant
+  assign form_id = 'ErBuy-' | append: section.id
+  assign euros = variant.price | divided_by: 100
+  assign cents = variant.price | modulo: 100
+  if cents == 0
+    assign price_text = euros | append: ' €'
+  else
+    assign cents_text = cents | prepend: '0' | slice: -2, 2
+    assign price_text = euros | append: ',' | append: cents_text | append: ' €'
+  endif
+-%}
+<section class="er er-product" data-er-product>
+  <div class="er__inner er-product__grid">
+    <div class="er-gallery" data-er-gallery>
+      <div class="er-gallery__track" data-er-gallery-track tabindex="0" aria-label="Photos du masque">
+        {%- if product.media.size > 0 -%}
+          {%- for media in product.media -%}
+            <div class="er-gallery__slide">
+              {%- if forloop.first -%}
+                {{ media.preview_image | image_url: width: 1400 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '(min-width: 800px) 50vw, 100vw', widths: '400, 600, 800, 1100, 1400', alt: media.alt }}
+              {%- else -%}
+                {{ media.preview_image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 800px) 50vw, 100vw', widths: '400, 600, 800, 1100, 1400', alt: media.alt }}
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        {%- else -%}
+          {%- for i in (1..3) -%}
+            <div class="er-gallery__slide er-gallery__slide--empty">
+              <div class="er-gallery__glow" aria-hidden="true"></div>
+              <img src="{{ 'eclat-rubis-icone.svg' | asset_url }}" alt="" width="96" height="96" loading="lazy">
+              <span>Photo {{ i }} à venir</span>
+            </div>
+          {%- endfor -%}
+        {%- endif -%}
+      </div>
+      <div class="er-gallery__dots" data-er-gallery-dots aria-hidden="true"></div>
+    </div>
+
+    <div class="er-buy" id="acheter">
+      <ul class="er-buy__tags">
+        {%- for i in (1..3) -%}
+          {%- assign key = 'tag_' | append: i -%}
+          {%- if section.settings[key] != blank -%}<li>{{ section.settings[key] | escape }}</li>{%- endif -%}
+        {%- endfor -%}
+      </ul>
+      <h1 class="er-buy__title">{{ product.title | escape }}</h1>
+      {%- if section.settings.promise != blank -%}
+        <p class="er-buy__promise">{{ section.settings.promise | escape }}</p>
+      {%- endif -%}
+      <p class="er-buy__price">
+        <strong>{{ price_text }}</strong>
+        <span>{{ section.settings.price_note | escape }}</span>
+      </p>
+
+      <ul class="er-buy__checks" data-er-stagger>
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'check' -%}
+            <li {{ block.shopify_attributes }}>
+              <svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><path d="M5.8 10.3l2.8 2.8 5.6-5.9" fill="none" stroke="#fbedea" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>{{ block.settings.text | escape }}</span>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+
+      <div class="er-offer">
+        <p class="er-offer__title">{{ section.settings.offer_title | escape }}</p>
+        <ul>
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'included' -%}
+              <li {{ block.shopify_attributes }}>
+                <span>{{ block.settings.label | escape }}</span>
+                <strong>{{ block.settings.value | escape }}</strong>
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </div>
+
+      {%- form 'product', product, id: form_id, class: 'er-buy__form' -%}
+        <input type="hidden" name="id" value="{{ variant.id }}">
+        <input type="hidden" name="quantity" value="1">
+        <button type="submit" class="er-button er-button--full" data-er-buy-button {% unless variant.available %}disabled{% endunless %}>
+          {%- if variant.available -%}
+            {{ section.settings.button_label | escape }} · {{ price_text }}
+          {%- else -%}
+            Bientôt disponible
+          {%- endif -%}
+        </button>
+      {%- endform -%}
+
+      {%- if section.settings.show_payments and shop.enabled_payment_types.size > 0 -%}
+        <ul class="er-buy__payments" aria-label="Moyens de paiement acceptés">
+          {%- for type in shop.enabled_payment_types -%}
+            <li>{{ type | payment_type_svg_tag: class: 'er-buy__payment' }}</li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+
+      <ol class="er-timeline" data-er-timeline aria-label="Livraison">
+        <li><span class="er-timeline__dot"></span><strong>{{ section.settings.step_1_title | escape }}</strong><span>{{ section.settings.step_1_text | escape }}</span></li>
+        <li><span class="er-timeline__dot"></span><strong>{{ section.settings.step_2_title | escape }}</strong><span>{{ section.settings.step_2_text | escape }}</span></li>
+        <li><span class="er-timeline__dot"></span><strong>{{ section.settings.step_3_title | escape }}</strong><span>{{ section.settings.step_3_text | escape }}</span></li>
+      </ol>
+
+      <div class="er-buy__details">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'detail' -%}
+            <details class="er-accordion" {{ block.shopify_attributes }}>
+              <summary>{{ block.settings.title | escape }}</summary>
+              <div class="er-accordion__body">{{ block.settings.text }}</div>
+            </details>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+
+  <div class="er-sticky" data-er-sticky hidden>
+    <div class="er-sticky__text">
+      <strong>{{ section.settings.sticky_title | default: product.title | escape }}</strong>
+      <span>{{ price_text }} · {{ section.settings.sticky_note | escape }}</span>
+    </div>
+    <button type="submit" form="{{ form_id }}" class="er-button" {% unless variant.available %}disabled{% endunless %}>{{ section.settings.sticky_button | escape }}</button>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  {{ product | structured_data }}
+</script>
+
+{% schema %}
+{
+  "name": "Éclat Rubis : produit",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "tag_1", "label": "Étiquette 1", "default": "Visage et cou" },
+    { "type": "text", "id": "tag_2", "label": "Étiquette 2", "default": "10 minutes par séance" },
+    { "type": "text", "id": "tag_3", "label": "Étiquette 3", "default": "Sans fil" },
+    { "type": "textarea", "id": "promise", "label": "Promesse (une phrase)", "default": "La lumière rouge des instituts, chez vous. Dix minutes le soir, pour une peau qui a l'air plus reposée." },
+    { "type": "text", "id": "price_note", "label": "Précision à côté du prix", "default": "Livraison offerte, TVA incluse" },
+    { "type": "text", "id": "offer_title", "label": "Encadré : titre", "default": "Compris dans votre commande" },
+    { "type": "text", "id": "button_label", "label": "Bouton", "default": "Ajouter au panier" },
+    { "type": "checkbox", "id": "show_payments", "label": "Afficher les moyens de paiement", "default": true },
+    { "type": "header", "content": "Livraison en 3 étapes" },
+    { "type": "text", "id": "step_1_title", "label": "Étape 1", "default": "Aujourd'hui" },
+    { "type": "text", "id": "step_1_text", "label": "Étape 1 : texte", "default": "Vous commandez" },
+    { "type": "text", "id": "step_2_title", "label": "Étape 2", "default": "Sous 1 à 3 jours" },
+    { "type": "text", "id": "step_2_text", "label": "Étape 2 : texte", "default": "Colis expédié" },
+    { "type": "text", "id": "step_3_title", "label": "Étape 3", "default": "7 à 15 jours ouvrés" },
+    { "type": "text", "id": "step_3_text", "label": "Étape 3 : texte", "default": "Chez vous" },
+    { "type": "header", "content": "Barre fixe sur téléphone" },
+    { "type": "text", "id": "sticky_title", "label": "Nom court", "default": "Masque LED Éclat Rubis" },
+    { "type": "text", "id": "sticky_note", "label": "Précision", "default": "livraison offerte" },
+    { "type": "text", "id": "sticky_button", "label": "Bouton", "default": "Ajouter" }
+  ],
+  "blocks": [
+    {
+      "type": "check",
+      "name": "Point fort",
+      "settings": [{ "type": "text", "id": "text", "label": "Texte", "default": "Couvre le visage et le cou en une seule séance" }]
+    },
+    {
+      "type": "included",
+      "name": "Compris dans la commande",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Libellé", "default": "Livraison suivie" },
+        { "type": "text", "id": "value", "label": "Valeur", "default": "Offerte" }
+      ]
+    },
+    {
+      "type": "detail",
+      "name": "Question dépliable",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Titre", "default": "Livraison" },
+        { "type": "richtext", "id": "text", "label": "Texte", "default": "<p>Offerte et suivie.</p>" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Éclat Rubis : produit" }]
+}
+{% endschema %}

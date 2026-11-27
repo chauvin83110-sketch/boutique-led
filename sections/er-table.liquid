@@ -1,0 +1,54 @@
+<section class="er er-table">
+  <div class="er__inner">
+    <h2 class="er-table__title" data-er-reveal>{{ section.settings.title | escape }} <em>{{ section.settings.title_accent | escape }}</em></h2>
+    <div class="er-table__card" data-er-reveal>
+      <table>
+        <thead>
+          <tr>
+            <td></td>
+            <th scope="col" class="er-table__us">{{ section.settings.us | escape }}</th>
+            <th scope="col">{{ section.settings.them | escape }}</th>
+          </tr>
+        </thead>
+        <tbody data-er-stagger>
+          {%- for block in section.blocks -%}
+            <tr {{ block.shopify_attributes }}>
+              <th scope="row">{{ block.settings.label | escape }}</th>
+              <td class="er-table__us">{{ block.settings.us | escape }}</td>
+              <td>{{ block.settings.them | escape }}</td>
+            </tr>
+          {%- endfor -%}
+        </tbody>
+      </table>
+    </div>
+    {%- if section.settings.note != blank -%}
+      <p class="er-table__note">{{ section.settings.note | escape }}</p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Éclat Rubis : tableau",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Titre", "default": "Le masque" },
+    { "type": "text", "id": "title_accent", "label": "Titre : mots en rubis", "default": "ou l'institut ?" },
+    { "type": "text", "id": "us", "label": "Colonne 1", "default": "Éclat Rubis" },
+    { "type": "text", "id": "them", "label": "Colonne 2", "default": "Institut" },
+    { "type": "text", "id": "note", "label": "Note sous le tableau" }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Ligne",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Critère", "default": "Prix" },
+        { "type": "text", "id": "us", "label": "Colonne 1", "default": "249 €, une fois" },
+        { "type": "text", "id": "them", "label": "Colonne 2", "default": "50 à 90 € la séance" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Éclat Rubis : tableau" }]
+}
+{% endschema %}

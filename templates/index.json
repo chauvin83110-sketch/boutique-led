@@ -16,7 +16,7 @@
         "line_1": "En deux ans,",
         "line_2": "mon visage a changé",
         "line_3": "plus qu'en dix.",
-        "text": "<p>Le masque Éclat Rubis apporte chez vous la lumière rouge et proche infrarouge des instituts, pour le visage et le cou. Dix minutes le soir, sans aiguille ni rendez-vous.</p>",
+        "text": "<p>Autour de la ménopause, la peau change vite. Le masque Éclat Rubis apporte chez vous la lumière rouge des instituts, pour le visage et le cou. Dix minutes le soir, sans aiguille et sans rendez-vous.</p>",
         "button_label": "Voir le masque, 249 €",
         "proof_1": "Satisfaite ou remboursée 30 jours",
         "proof_2": "Livraison offerte et suivie",
@@ -27,14 +27,14 @@
       "type": "er-signs",
       "settings": {
         "title": "Ce n'est pas dans votre tête.",
-        "text": "<p>Autour de la ménopause, la peau peut changer en quelques mois. La crème qui suffisait à 40 ans ne suit plus, et beaucoup de femmes le vivent en silence.</p>"
+        "text": "<p>Autour de la ménopause, la peau peut changer en quelques mois. La crème qui suffisait à 40 ans ne suffit plus. Beaucoup de femmes le vivent sans en parler.</p>"
       },
       "blocks": {
         "s1": {
           "type": "sign",
           "settings": {
             "title": "Le teint",
-            "text": "Plus terne au réveil, même après une vraie nuit."
+            "text": "Il est plus terne au réveil, même après une bonne nuit."
           }
         },
         "s2": {
@@ -48,7 +48,7 @@
           "type": "sign",
           "settings": {
             "title": "Le cou",
-            "text": "Il marque avant le visage, et on pense rarement à en prendre soin."
+            "text": "Il marque avant le visage, et on pense rarement à s'en occuper."
           }
         }
       },
@@ -61,36 +61,36 @@
     "ritual": {
       "type": "er-ritual",
       "settings": {
-        "title": "Dix minutes le soir, rien que pour vous.",
+        "title": "Comment ça se passe : dix minutes, le soir.",
         "minutes": 10
       },
       "blocks": {
         "r1": {
           "type": "step",
           "settings": {
-            "title": "Une peau propre et sèche",
-            "text": "Démaquillée, sans crème : la lumière arrive directement sur la peau."
+            "title": "Lavez et séchez votre visage",
+            "text": "Sans crème ni maquillage, pour que la lumière arrive directement sur la peau."
           }
         },
         "r2": {
           "type": "step",
           "settings": {
-            "title": "Le mode rouge et infrarouge",
-            "text": "Lumière rouge à 630 nm et proche infrarouge à 850 nm, sur le visage et le cou."
+            "title": "Posez le masque et allumez-le",
+            "text": "Choisissez le mode rouge et infrarouge. Il éclaire le visage et le cou."
           }
         },
         "r3": {
           "type": "step",
           "settings": {
-            "title": "Dix minutes, les mains libres",
-            "text": "Vous lisez, vous regardez un épisode, vous fermez les yeux."
+            "title": "Laissez-le dix minutes",
+            "text": "Il tient tout seul. Vous lisez, vous regardez un épisode ou vous fermez les yeux."
           }
         },
         "r4": {
           "type": "step",
           "settings": {
-            "title": "Votre sérum habituel ensuite",
-            "text": "Trois à cinq séances par semaine, pendant plusieurs semaines."
+            "title": "Mettez ensuite votre crème habituelle",
+            "text": "Recommencez trois à cinq soirs par semaine. La régularité compte plus que la durée."
           }
         }
       },
@@ -105,12 +105,12 @@
       "type": "er-compare",
       "settings": {
         "title": "Le prix de trois ou quatre séances en institut.",
-        "them_label": "Une cure de 10 séances de LED en institut",
+        "them_label": "10 séances de lumière LED en institut",
         "them_amount": 700,
-        "them_note": "Comptez 50 à 90 € la séance selon les instituts, plus les trajets.",
+        "them_note": "Une séance coûte 50 à 90 € selon l'institut. Il faut ajouter les trajets.",
         "us_label": "Le masque Éclat Rubis",
         "us_amount": 249,
-        "us_note": "Payé une fois. Ensuite, autant de séances que vous voulez, chez vous."
+        "us_note": "Vous payez une fois. Ensuite, vous faites autant de séances que vous voulez."
       }
     },
     "guarantee": {
@@ -118,7 +118,7 @@
       "settings": {
         "days": 30,
         "title": "Essayez-le pendant 30 jours.",
-        "text": "<p>Utilisez-le chez vous pendant un mois. S'il ne vous convient pas, écrivez-nous et renvoyez-le : nous vous remboursons. Cette garantie s'ajoute au droit de rétractation de 14 jours.</p>",
+        "text": "<p>Utilisez le masque chez vous pendant un mois. S'il ne vous convient pas, écrivez-nous et renvoyez-le : nous vous remboursons. Ces 30 jours s'ajoutent aux 14 jours de rétractation prévus par la loi.</p>",
         "link_label": "Lire la politique de retour",
         "link": "/policies/refund-policy"
       }
@@ -133,14 +133,14 @@
           "type": "question",
           "settings": {
             "question": "Est-ce que ça marche vraiment ?",
-            "answer": "<p>La lumière rouge et le proche infrarouge sont utilisés en institut depuis des années. Le masque reprend ces longueurs d'onde, 630 et 850 nm. Les changements sur l'aspect de la peau demandent des séances régulières pendant plusieurs semaines, et ils varient d'une peau à l'autre. C'est pour cela que vous avez 30 jours pour juger sur la vôtre.</p>"
+            "answer": "<p>La lumière rouge et le proche infrarouge sont utilisés en institut depuis des années. Le masque utilise les mêmes lumières (630 et 850 nm).</p><p>Le changement n'est pas immédiat. Il faut des séances régulières pendant plusieurs semaines, et le résultat varie d'une peau à l'autre. C'est pour cela que vous avez 30 jours pour juger sur la vôtre.</p>"
           }
         },
         "q2": {
           "type": "question",
           "settings": {
             "question": "Est-ce que ça chauffe ?",
-            "answer": "<p>Non. On sent au plus une légère tiédeur.</p>"
+            "answer": "<p>Non. Vous sentez au plus une légère tiédeur.</p>"
           }
         },
         "q3": {
@@ -161,14 +161,14 @@
           "type": "question",
           "settings": {
             "question": "Quand vais-je le recevoir ?",
-            "answer": "<p>La livraison est offerte et suivie. Comptez 7 à 15 jours ouvrés : vous recevez le numéro de suivi par e-mail dès l'expédition.</p>"
+            "answer": "<p>Entre 7 et 15 jours ouvrés après votre commande. La livraison est offerte. Vous recevez un numéro de suivi par e-mail dès que le colis part.</p>"
           }
         },
         "q6": {
           "type": "question",
           "settings": {
             "question": "Et s'il ne me convient pas ?",
-            "answer": "<p>Vous avez 30 jours après réception pour l'essayer. S'il ne vous convient pas, écrivez-nous et renvoyez-le : nous vous remboursons.</p>"
+            "answer": "<p>Vous avez 30 jours après la réception pour l'essayer. S'il ne vous convient pas, écrivez-nous et renvoyez-le : nous vous remboursons. Les frais de retour sont à votre charge.</p>"
           }
         }
       },
@@ -188,13 +188,121 @@
         "title": "Ce soir, dix minutes pour vous.",
         "button_label": "Commander le masque, 249 €"
       }
+    },
+    "essentials": {
+      "type": "er-essentials",
+      "settings": {
+        "title": "L'essentiel",
+        "title_accent": "en quatre points."
+      },
+      "blocks": {
+        "e1": {
+          "type": "point",
+          "settings": {
+            "icon": "light",
+            "title": "La lumière des instituts",
+            "text": "Lumière rouge (630 nm) et proche infrarouge (850 nm) : les deux lumières des soins LED en institut."
+          }
+        },
+        "e2": {
+          "type": "point",
+          "settings": {
+            "icon": "face",
+            "title": "Le visage et le cou",
+            "text": "Le masque descend sous le menton. Le cou est éclairé en même temps que le visage."
+          }
+        },
+        "e3": {
+          "type": "point",
+          "settings": {
+            "icon": "hands",
+            "title": "Les mains libres",
+            "text": "Il est souple et sans fil. Pendant la séance, vous faites ce que vous voulez."
+          }
+        },
+        "e4": {
+          "type": "point",
+          "settings": {
+            "icon": "shield",
+            "title": "30 jours pour juger",
+            "text": "Essayez-le chez vous. S'il ne vous convient pas, vous le renvoyez et nous vous remboursons."
+          }
+        }
+      },
+      "block_order": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ]
+    },
+    "table": {
+      "type": "er-table",
+      "settings": {
+        "title": "Le masque",
+        "title_accent": "ou l'institut ?",
+        "us": "Éclat Rubis",
+        "them": "Institut",
+        "note": "Prix d'une séance de LED relevés dans des instituts en France : 50 à 90 €."
+      },
+      "blocks": {
+        "t1": {
+          "type": "row",
+          "settings": {
+            "label": "Prix",
+            "us": "249 €, une seule fois",
+            "them": "50 à 90 € la séance"
+          }
+        },
+        "t2": {
+          "type": "row",
+          "settings": {
+            "label": "Où",
+            "us": "Chez vous",
+            "them": "Sur place"
+          }
+        },
+        "t3": {
+          "type": "row",
+          "settings": {
+            "label": "Rendez-vous",
+            "us": "Aucun",
+            "them": "À chaque séance"
+          }
+        },
+        "t4": {
+          "type": "row",
+          "settings": {
+            "label": "Quand",
+            "us": "Le soir qui vous arrange",
+            "them": "Aux horaires d'ouverture"
+          }
+        },
+        "t5": {
+          "type": "row",
+          "settings": {
+            "label": "Séances",
+            "us": "Autant que vous voulez",
+            "them": "Payées une par une"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ]
     }
   },
   "order": [
     "hero",
     "signs",
+    "essentials",
     "ritual",
     "compare",
+    "table",
     "guarantee",
     "faq",
     "cta"

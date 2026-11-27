@@ -3,6 +3,9 @@
   if section.settings.product != blank
     assign product_url = section.settings.product.url
   endif
+  if template.name == 'product'
+    assign product_url = '#acheter'
+  endif
 -%}
 <section class="er er-cta">
   <div class="er__inner">

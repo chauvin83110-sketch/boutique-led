@@ -20,7 +20,50 @@
     });
   }
 
+  /* Ce qui doit marcher même sans GSAP : galerie au doigt et barre d'achat fixe. */
+  function initGallery() {
+    document.querySelectorAll('[data-er-gallery]').forEach(function (g) {
+      var track = g.querySelector('[data-er-gallery-track]');
+      var dots = g.querySelector('[data-er-gallery-dots]');
+      if (!track || !dots) return;
+      var n = track.children.length;
+      if (n < 2) return;
+      for (var i = 0; i < n; i++) dots.appendChild(document.createElement('i'));
+      var current = -1;
+      function update() {
+        var idx = Math.round(track.scrollLeft / track.clientWidth);
+        if (idx === current) return;
+        current = idx;
+        Array.prototype.forEach.call(dots.children, function (d, j) { d.classList.toggle('is-on', j === idx); });
+      }
+      var ticking = false;
+      track.addEventListener('scroll', function () {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function () { ticking = false; update(); });
+      }, { passive: true });
+      update();
+    });
+  }
+
+  function initSticky() {
+    document.querySelectorAll('[data-er-sticky]').forEach(function (bar) {
+      var scope = bar.closest('[data-er-product]') || document;
+      var button = scope.querySelector('[data-er-buy-button]');
+      if (!button || !('IntersectionObserver' in window)) return;
+      bar.hidden = false;
+      var io = new IntersectionObserver(function (entries) {
+        var e = entries[0];
+        /* La barre apparaît quand le bouton principal est sorti par le haut de l'écran. */
+        bar.classList.toggle('is-on', !e.isIntersecting && e.boundingClientRect.top < 0);
+      });
+      io.observe(button);
+    });
+  }
+
   ready(function () {
+    initGallery();
+    initSticky();
     if (!window.gsap || !window.ScrollTrigger) {
       root.classList.remove('er-js');
       return;
@@ -49,6 +92,9 @@
         initReveals();
         initCounts();
         initRitual(c.desktop);
+        initStagger();
+        initTimeline();
+        initAccordions();
       }
     );
 
@@ -149,6 +195,58 @@
           }
         });
         if (steps[0]) steps[0].classList.add('is-active');
+      });
+    }
+
+    /* Listes et cartes : les éléments arrivent l'un après l'autre. */
+    function initStagger() {
+      document.querySelectorAll('[data-er-stagger]').forEach(function (list) {
+        var items = list.children;
+        if (!items.length) return;
+        gsap.set(items, { opacity: 0, y: 14 });
+        ScrollTrigger.create({
+          trigger: list,
+          start: 'top 88%',
+          once: true,
+          onEnter: function () {
+            gsap.to(items, { opacity: 1, y: 0, duration: D.std, ease: EASE, stagger: 0.07, clearProps: 'transform' });
+          }
+        });
+      });
+    }
+
+    /* Livraison : le trait rubis avance d'une étape à l'autre. */
+    function initTimeline() {
+      document.querySelectorAll('[data-er-timeline]').forEach(function (tl) {
+        var dots = tl.querySelectorAll('.er-timeline__dot');
+        tl.style.setProperty('--er-tl', 0);
+        gsap.set(dots, { scale: 0.4, opacity: 0 });
+        var t = gsap.timeline({ scrollTrigger: { trigger: tl, start: 'top 90%', once: true } });
+        t.to(tl, { '--er-tl': 1, duration: D.slow, ease: 'power1.inOut' }, 0);
+        t.to(dots, { scale: 1, opacity: 1, duration: D.quick, ease: EASE, stagger: D.slow / 2.2 }, 0);
+      });
+    }
+
+    /* Questions : ouverture et fermeture en douceur. */
+    function initAccordions() {
+      document.querySelectorAll('.er-accordion, .er-faq details').forEach(function (d) {
+        var summary = d.querySelector('summary');
+        var body = summary && summary.nextElementSibling;
+        if (!body || d.erBound) return;
+        d.erBound = true;
+        summary.addEventListener('click', function (ev) {
+          ev.preventDefault();
+          gsap.killTweensOf(body);
+          if (d.open) {
+            gsap.to(body, {
+              height: 0, opacity: 0, duration: D.quick, ease: EASE,
+              onComplete: function () { d.open = false; gsap.set(body, { clearProps: 'height,opacity' }); }
+            });
+          } else {
+            d.open = true;
+            gsap.fromTo(body, { height: 0, opacity: 0 }, { height: 'auto', opacity: 1, duration: D.quick, ease: EASE, clearProps: 'height,opacity' });
+          }
+        });
       });
     }
 

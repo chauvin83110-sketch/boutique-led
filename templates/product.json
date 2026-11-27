@@ -10,301 +10,230 @@
 {
   "sections": {
     "main": {
-      "type": "product-information",
+      "type": "er-product",
+      "settings": {
+        "tag_1": "Visage et cou",
+        "tag_2": "10 minutes par séance",
+        "tag_3": "Sans fil",
+        "promise": "La lumière rouge des instituts, chez vous. Dix minutes le soir, pour une peau qui a l'air plus reposée.",
+        "price_note": "Livraison offerte, TVA incluse",
+        "offer_title": "Compris dans votre commande",
+        "button_label": "Ajouter au panier",
+        "show_payments": true,
+        "step_1_title": "Aujourd'hui",
+        "step_1_text": "Vous commandez",
+        "step_2_title": "Sous 1 à 3 jours",
+        "step_2_text": "Votre colis part",
+        "step_3_title": "7 à 15 jours ouvrés",
+        "step_3_text": "Il arrive chez vous",
+        "sticky_title": "Masque LED Éclat Rubis",
+        "sticky_note": "livraison offerte",
+        "sticky_button": "Ajouter"
+      },
       "blocks": {
-        "media-gallery": {
-          "type": "_product-media-gallery",
-          "static": true,
+        "c1": {
+          "type": "check",
           "settings": {
-            "media_presentation": "grid",
-            "media_columns": "two",
-            "image_gap": 4,
-            "large_first_image": false,
-            "icons_style": "arrow",
-            "slideshow_controls_style": "counter",
-            "slideshow_mobile_controls_style": "dots",
-            "thumbnail_position": "right",
-            "thumbnail_width": 44,
-            "aspect_ratio": "adapt",
-            "constrain_to_viewport": true,
-            "media_fit": "contain",
-            "media_radius": 0,
-            "extend_media": false,
-            "zoom": true,
-            "video_loop": false,
-            "hide_variants": true,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+            "text": "Les deux lumières des soins en institut : rouge (630 nm) et proche infrarouge (850 nm)"
+          }
         },
-        "product-details": {
-          "type": "_product-details",
-          "static": true,
+        "c2": {
+          "type": "check",
           "settings": {
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "details_position": "flex-start",
-            "gap": 28,
-            "sticky_details_desktop": true,
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 24,
-            "padding-block-end": 24,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "group_icgrde": {
-              "type": "group",
-              "name": "t:names.header",
-              "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "background_media": "none",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "link": "",
-                "open_in_new_tab": false,
-                "placeholder": "",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "text_xpVMaM": {
-                  "type": "text",
-                  "name": "t:names.title",
-                  "settings": {
-                    "text": "<h1>{{ closest.product.title }}</h1>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "h3",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "price_tVjtKg": {
-                  "type": "price",
-                  "settings": {
-                    "show_sale_price_first": true,
-                    "show_installments": true,
-                    "show_tax_info": true,
-                    "type_preset": "paragraph",
-                    "width": "100%",
-                    "alignment": "left",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "padding-block-start": 4,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text_xpVMaM",
-                "price_tVjtKg"
-              ]
-            },
-            "divider_VJhene": {
-              "type": "_divider",
-              "name": "t:names.divider",
-              "settings": {
-                "thickness": 1,
-                "corner_radius": "square",
-                "divider_color": "{{ settings.color_palette.color3 }}",
-                "width_percent": 100,
-                "padding-block-start": 0,
-                "padding-block-end": 0
-              },
-              "blocks": {}
-            },
-            "variant_picker_R3rGDr": {
-              "type": "variant-picker",
-              "settings": {
-                "variant_style": "buttons",
-                "show_swatches": false,
-                "alignment": "left",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "buy_buttons_eYQEYi": {
-              "type": "buy-buttons",
-              "settings": {
-                "stacking": true,
-                "show_pickup_availability": false,
-                "gift_card_form": true,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "quantity": {
-                  "type": "quantity",
-                  "static": true,
-                  "settings": {},
-                  "blocks": {}
-                },
-                "add-to-cart": {
-                  "type": "add-to-cart",
-                  "static": true,
-                  "settings": {
-                    "style_class": "button"
-                  },
-                  "blocks": {}
-                },
-                "accelerated-checkout": {
-                  "type": "accelerated-checkout",
-                  "static": true,
-                  "settings": {},
-                  "blocks": {}
-                }
-              },
-              "block_order": []
-            },
-            "text_aEtTtq": {
-              "type": "text",
-              "name": "t:names.product_description",
-              "settings": {
-                "text": "{{ closest.product.description }}",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "group_icgrde",
-            "divider_VJhene",
-            "variant_picker_R3rGDr",
-            "buy_buttons_eYQEYi",
-            "text_aEtTtq"
-          ]
+            "text": "Le visage et le cou en une seule séance de 10 minutes"
+          }
         },
-        "disclosures": {
-          "type": "disclosures",
+        "c3": {
+          "type": "check",
           "settings": {
-            "padding-block-start": 0,
-            "padding-block-end": 0
-          },
-          "blocks": {}
+            "text": "Souple et sans fil : vous gardez les mains libres"
+          }
+        },
+        "c4": {
+          "type": "check",
+          "settings": {
+            "text": "Sans aiguille, sans produit, sans rendez-vous"
+          }
+        },
+        "i1": {
+          "type": "included",
+          "settings": {
+            "label": "Livraison suivie",
+            "value": "Offerte"
+          }
+        },
+        "i2": {
+          "type": "included",
+          "settings": {
+            "label": "Essai chez vous, remboursé s'il ne vous convient pas",
+            "value": "30 jours"
+          }
+        },
+        "i3": {
+          "type": "included",
+          "settings": {
+            "label": "Droit de rétractation",
+            "value": "14 jours"
+          }
+        },
+        "d1": {
+          "type": "detail",
+          "settings": {
+            "title": "Quand vais-je le recevoir ?",
+            "text": "<p>Entre 7 et 15 jours ouvrés après votre commande. La livraison est offerte. Vous recevez un numéro de suivi par e-mail dès que le colis part.</p>"
+          }
+        },
+        "d2": {
+          "type": "detail",
+          "settings": {
+            "title": "Et s'il ne me convient pas ?",
+            "text": "<p>Vous avez 30 jours après la réception pour l'essayer. S'il ne vous convient pas, écrivez-nous et renvoyez-le : nous vous remboursons. Les frais de retour sont à votre charge.</p>"
+          }
+        },
+        "d3": {
+          "type": "detail",
+          "settings": {
+            "title": "Comment l'utiliser ?",
+            "text": "<p>Sur une peau propre et sèche, dix minutes le soir, trois à cinq fois par semaine. Gardez les yeux fermés pendant la séance.</p>"
+          }
+        },
+        "d4": {
+          "type": "detail",
+          "settings": {
+            "title": "Précautions",
+            "text": "<p>Demandez d'abord l'avis de votre médecin si vous êtes enceinte, épileptique, sensible à la lumière, si vous suivez un traitement ou si vous avez une maladie des yeux ou de la peau. Le masque agit sur l'aspect de la peau. Ce n'est pas un dispositif médical.</p>"
+          }
         }
       },
       "block_order": [
-        "disclosures"
-      ],
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "i1",
+        "i2",
+        "i3",
+        "d1",
+        "d2",
+        "d3",
+        "d4"
+      ]
+    },
+    "signs": {
+      "type": "er-signs",
       "settings": {
-        "content_width": "content-center-aligned",
-        "desktop_media_position": "left",
-        "equal_columns": false,
-        "limit_details_width": false,
-        "gap": 48,
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
+        "title": "Ce n'est pas dans votre tête.",
+        "text": "<p>Autour de la ménopause, la peau peut changer en quelques mois. La crème qui suffisait à 40 ans ne suffit plus. Beaucoup de femmes le vivent sans en parler.</p>"
+      },
+      "blocks": {
+        "s1": {
+          "type": "sign",
+          "settings": {
+            "title": "Le teint",
+            "text": "Il est plus terne au réveil, même après une bonne nuit."
+          }
+        },
+        "s2": {
+          "type": "sign",
+          "settings": {
+            "title": "Le bas du visage",
+            "text": "Il se relâche, et ça se voit surtout sur les photos de profil."
+          }
+        },
+        "s3": {
+          "type": "sign",
+          "settings": {
+            "title": "Le cou",
+            "text": "Il marque avant le visage, et on pense rarement à s'en occuper."
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    "essentials": {
+      "type": "er-essentials",
+      "settings": {
+        "title": "L'essentiel",
+        "title_accent": "en quatre points."
+      },
+      "blocks": {
+        "e1": {
+          "type": "point",
+          "settings": {
+            "icon": "light",
+            "title": "La lumière des instituts",
+            "text": "Lumière rouge (630 nm) et proche infrarouge (850 nm) : les deux lumières des soins LED en institut."
+          }
+        },
+        "e2": {
+          "type": "point",
+          "settings": {
+            "icon": "face",
+            "title": "Le visage et le cou",
+            "text": "Le masque descend sous le menton. Le cou est éclairé en même temps que le visage."
+          }
+        },
+        "e3": {
+          "type": "point",
+          "settings": {
+            "icon": "hands",
+            "title": "Les mains libres",
+            "text": "Il est souple et sans fil. Pendant la séance, vous faites ce que vous voulez."
+          }
+        },
+        "e4": {
+          "type": "point",
+          "settings": {
+            "icon": "shield",
+            "title": "30 jours pour juger",
+            "text": "Essayez-le chez vous. S'il ne vous convient pas, vous le renvoyez et nous vous remboursons."
+          }
+        }
+      },
+      "block_order": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ]
     },
     "ritual": {
       "type": "er-ritual",
       "settings": {
-        "title": "Dix minutes le soir, rien que pour vous.",
+        "title": "Comment ça se passe : dix minutes, le soir.",
         "minutes": 10
       },
       "blocks": {
         "r1": {
           "type": "step",
           "settings": {
-            "title": "Une peau propre et sèche",
-            "text": "Démaquillée, sans crème : la lumière arrive directement sur la peau."
+            "title": "Lavez et séchez votre visage",
+            "text": "Sans crème ni maquillage, pour que la lumière arrive directement sur la peau."
           }
         },
         "r2": {
           "type": "step",
           "settings": {
-            "title": "Le mode rouge et infrarouge",
-            "text": "Lumière rouge à 630 nm et proche infrarouge à 850 nm, sur le visage et le cou."
+            "title": "Posez le masque et allumez-le",
+            "text": "Choisissez le mode rouge et infrarouge. Il éclaire le visage et le cou."
           }
         },
         "r3": {
           "type": "step",
           "settings": {
-            "title": "Dix minutes, les mains libres",
-            "text": "Vous lisez, vous regardez un épisode, vous fermez les yeux."
+            "title": "Laissez-le dix minutes",
+            "text": "Il tient tout seul. Vous lisez, vous regardez un épisode ou vous fermez les yeux."
           }
         },
         "r4": {
           "type": "step",
           "settings": {
-            "title": "Votre sérum habituel ensuite",
-            "text": "Trois à cinq séances par semaine, pendant plusieurs semaines."
+            "title": "Mettez ensuite votre crème habituelle",
+            "text": "Recommencez trois à cinq soirs par semaine. La régularité compte plus que la durée."
           }
         }
       },
@@ -319,20 +248,79 @@
       "type": "er-compare",
       "settings": {
         "title": "Le prix de trois ou quatre séances en institut.",
-        "them_label": "Une cure de 10 séances de LED en institut",
+        "them_label": "10 séances de lumière LED en institut",
         "them_amount": 700,
-        "them_note": "Comptez 50 à 90 € la séance selon les instituts, plus les trajets.",
+        "them_note": "Une séance coûte 50 à 90 € selon l'institut. Il faut ajouter les trajets.",
         "us_label": "Le masque Éclat Rubis",
         "us_amount": 249,
-        "us_note": "Payé une fois. Ensuite, autant de séances que vous voulez, chez vous."
+        "us_note": "Vous payez une fois. Ensuite, vous faites autant de séances que vous voulez."
       }
+    },
+    "table": {
+      "type": "er-table",
+      "settings": {
+        "title": "Le masque",
+        "title_accent": "ou l'institut ?",
+        "us": "Éclat Rubis",
+        "them": "Institut",
+        "note": "Prix d'une séance de LED relevés dans des instituts en France : 50 à 90 €."
+      },
+      "blocks": {
+        "t1": {
+          "type": "row",
+          "settings": {
+            "label": "Prix",
+            "us": "249 €, une seule fois",
+            "them": "50 à 90 € la séance"
+          }
+        },
+        "t2": {
+          "type": "row",
+          "settings": {
+            "label": "Où",
+            "us": "Chez vous",
+            "them": "Sur place"
+          }
+        },
+        "t3": {
+          "type": "row",
+          "settings": {
+            "label": "Rendez-vous",
+            "us": "Aucun",
+            "them": "À chaque séance"
+          }
+        },
+        "t4": {
+          "type": "row",
+          "settings": {
+            "label": "Quand",
+            "us": "Le soir qui vous arrange",
+            "them": "Aux horaires d'ouverture"
+          }
+        },
+        "t5": {
+          "type": "row",
+          "settings": {
+            "label": "Séances",
+            "us": "Autant que vous voulez",
+            "them": "Payées une par une"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ]
     },
     "guarantee": {
       "type": "er-guarantee",
       "settings": {
         "days": 30,
         "title": "Essayez-le pendant 30 jours.",
-        "text": "<p>Utilisez-le chez vous pendant un mois. S'il ne vous convient pas, écrivez-nous et renvoyez-le : nous vous remboursons. Cette garantie s'ajoute au droit de rétractation de 14 jours.</p>",
+        "text": "<p>Utilisez le masque chez vous pendant un mois. S'il ne vous convient pas, écrivez-nous et renvoyez-le : nous vous remboursons. Ces 30 jours s'ajoutent aux 14 jours de rétractation prévus par la loi.</p>",
         "link_label": "Lire la politique de retour",
         "link": "/policies/refund-policy"
       }
@@ -347,14 +335,14 @@
           "type": "question",
           "settings": {
             "question": "Est-ce que ça marche vraiment ?",
-            "answer": "<p>La lumière rouge et le proche infrarouge sont utilisés en institut depuis des années. Le masque reprend ces longueurs d'onde, 630 et 850 nm. Les changements sur l'aspect de la peau demandent des séances régulières pendant plusieurs semaines, et ils varient d'une peau à l'autre. C'est pour cela que vous avez 30 jours pour juger sur la vôtre.</p>"
+            "answer": "<p>La lumière rouge et le proche infrarouge sont utilisés en institut depuis des années. Le masque utilise les mêmes lumières (630 et 850 nm).</p><p>Le changement n'est pas immédiat. Il faut des séances régulières pendant plusieurs semaines, et le résultat varie d'une peau à l'autre. C'est pour cela que vous avez 30 jours pour juger sur la vôtre.</p>"
           }
         },
         "q2": {
           "type": "question",
           "settings": {
             "question": "Est-ce que ça chauffe ?",
-            "answer": "<p>Non. On sent au plus une légère tiédeur.</p>"
+            "answer": "<p>Non. Vous sentez au plus une légère tiédeur.</p>"
           }
         },
         "q3": {
@@ -375,14 +363,14 @@
           "type": "question",
           "settings": {
             "question": "Quand vais-je le recevoir ?",
-            "answer": "<p>La livraison est offerte et suivie. Comptez 7 à 15 jours ouvrés : vous recevez le numéro de suivi par e-mail dès l'expédition.</p>"
+            "answer": "<p>Entre 7 et 15 jours ouvrés après votre commande. La livraison est offerte. Vous recevez un numéro de suivi par e-mail dès que le colis part.</p>"
           }
         },
         "q6": {
           "type": "question",
           "settings": {
             "question": "Et s'il ne me convient pas ?",
-            "answer": "<p>Vous avez 30 jours après réception pour l'essayer. S'il ne vous convient pas, écrivez-nous et renvoyez-le : nous vous remboursons.</p>"
+            "answer": "<p>Vous avez 30 jours après la réception pour l'essayer. S'il ne vous convient pas, écrivez-nous et renvoyez-le : nous vous remboursons. Les frais de retour sont à votre charge.</p>"
           }
         }
       },
@@ -395,48 +383,24 @@
         "q6"
       ]
     },
-    "signs": {
-      "type": "er-signs",
+    "cta": {
+      "type": "er-cta",
       "settings": {
-        "title": "Ce n'est pas dans votre tête.",
-        "text": "<p>Autour de la ménopause, la peau peut changer en quelques mois. La crème qui suffisait à 40 ans ne suit plus, et beaucoup de femmes le vivent en silence.</p>"
-      },
-      "blocks": {
-        "s1": {
-          "type": "sign",
-          "settings": {
-            "title": "Le teint",
-            "text": "Plus terne au réveil, même après une vraie nuit."
-          }
-        },
-        "s2": {
-          "type": "sign",
-          "settings": {
-            "title": "Le bas du visage",
-            "text": "Il se relâche, et ça se voit surtout sur les photos de profil."
-          }
-        },
-        "s3": {
-          "type": "sign",
-          "settings": {
-            "title": "Le cou",
-            "text": "Il marque avant le visage, et on pense rarement à en prendre soin."
-          }
-        }
-      },
-      "block_order": [
-        "s1",
-        "s2",
-        "s3"
-      ]
+        "product": "masque-led-lumiere-rouge-visage-et-cou",
+        "title": "Ce soir, dix minutes pour vous.",
+        "button_label": "Commander le masque, 249 €"
+      }
     }
   },
   "order": [
     "main",
     "signs",
+    "essentials",
     "ritual",
     "compare",
+    "table",
     "guarantee",
-    "faq"
+    "faq",
+    "cta"
   ]
 }
