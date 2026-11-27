@@ -298,8 +298,8 @@
   padding: 7px 11px; border-radius: 99px;
   background: var(--er-champagne); color: var(--er-rubis);
 }
-.er-buy__title { font-size: clamp(32px, 8.4vw, 46px); line-height: 1.04; }
-.er-buy__promise { margin: 12px 0 0; font-size: 16.5px; line-height: 1.5; color: var(--er-sub); }
+.er-buy__title { font: 600 15px/1.4 var(--er-sans); letter-spacing: 0.01em; color: var(--er-sub); }
+.er-buy__promise { margin: 14px 0 0; font: italic 500 clamp(23px, 6.2vw, 30px)/1.2 var(--er-serif); color: var(--er-rubis); }
 .er-buy__price { margin: 18px 0 0; display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 12px; }
 .er-buy__price strong { font: 600 30px/1 var(--er-sans); color: var(--er-rubis); font-variant-numeric: tabular-nums; }
 .er-buy__price span { font-size: 14px; color: var(--er-sub); }
