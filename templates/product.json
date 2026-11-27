@@ -692,7 +692,10 @@
         "p9",
         "p10"
       ],
-      "settings": {}
+      "settings": {
+        "mockup": true,
+        "mockup_note": "Aperçu interne : images d'exemple générées, ce bloc disparaît automatiquement quand la boutique est publiée."
+      }
     },
     "timeline": {
       "type": "er-weeks",
