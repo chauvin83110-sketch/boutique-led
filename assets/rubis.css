@@ -581,3 +581,21 @@
   .er-results__list { margin-top: 40px; }
   .er-result { flex-basis: 31%; }
 }
+
+/* Semaine après semaine */
+.er-weeks { padding-block: clamp(56px, 9vw, 120px); }
+.er-weeks__title { font-size: clamp(32px, 4.4vw, 60px); }
+.er .er-weeks__text { margin: 14px 0 0; font-size: 16px; line-height: 1.55; max-width: 46ch; }
+.er-weeks__list { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 0; }
+.er-weeks__step { position: relative; padding: 0 0 28px 28px; border-left: 1px solid var(--er-line); }
+.er-weeks__step:last-child { padding-bottom: 0; }
+.er-weeks__step::before { content: ''; position: absolute; left: -6px; top: 4px; width: 11px; height: 11px; border-radius: 50%; background: var(--er-rubis); }
+.er .er-weeks__when { margin: 0; font-family: var(--er-sans); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--er-rubis); }
+.er-weeks__step h3 { margin: 6px 0 0; font-family: var(--er-serif); font-size: clamp(24px, 2.4vw, 30px); font-weight: 500; line-height: 1.15; color: var(--er-encre); }
+.er .er-weeks__step p:last-child { margin: 8px 0 0; font-size: 15px; line-height: 1.55; color: var(--er-sub); max-width: 44ch; }
+.er .er-weeks__note { margin: 24px 0 0; font-size: 13px; line-height: 1.5; color: var(--er-sub); max-width: none; }
+@media (min-width: 900px) {
+  .er-weeks__list { grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 44px; }
+  .er-weeks__step { padding: 24px 0 0; border-left: 0; border-top: 1px solid var(--er-line); }
+  .er-weeks__step::before { left: 0; top: -6px; }
+}

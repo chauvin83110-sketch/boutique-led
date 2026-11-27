@@ -1,0 +1,46 @@
+<section class="er er-weeks" aria-labelledby="ErWeeks-{{ section.id }}">
+  <div class="er__inner">
+    <h2 class="er-weeks__title" id="ErWeeks-{{ section.id }}" data-er-reveal>{{ section.settings.title | escape }} <em>{{ section.settings.title_accent | escape }}</em></h2>
+    {%- if section.settings.text != blank -%}
+      <p class="er-weeks__text">{{ section.settings.text | escape }}</p>
+    {%- endif -%}
+    <ol class="er-weeks__list" data-er-stagger>
+      {%- for block in section.blocks -%}
+        <li class="er-weeks__step" {{ block.shopify_attributes }}>
+          <p class="er-weeks__when">{{ block.settings.when | escape }}</p>
+          <h3>{{ block.settings.title | escape }}</h3>
+          <p>{{ block.settings.text | escape }}</p>
+        </li>
+      {%- endfor -%}
+    </ol>
+    {%- if section.settings.note != blank -%}
+      <p class="er-weeks__note">{{ section.settings.note | escape }}</p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Éclat Rubis : semaines",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Titre", "default": "Ce que vous verrez," },
+    { "type": "text", "id": "title_accent", "label": "Titre (en italique)", "default": "semaine après semaine." },
+    { "type": "textarea", "id": "text", "label": "Texte" },
+    { "type": "textarea", "id": "note", "label": "Mention" }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Étape",
+      "settings": [
+        { "type": "text", "id": "when", "label": "Moment" },
+        { "type": "text", "id": "title", "label": "Titre" },
+        { "type": "textarea", "id": "text", "label": "Texte" }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [{ "name": "Éclat Rubis : semaines" }]
+}
+{% endschema %}

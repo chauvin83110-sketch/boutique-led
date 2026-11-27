@@ -693,6 +693,46 @@
         "p10"
       ],
       "settings": {}
+    },
+    "timeline": {
+      "type": "er-weeks",
+      "blocks": {
+        "t1": {
+          "type": "step",
+          "settings": {
+            "when": "Semaines 1 et 2",
+            "title": "Vous prenez le pli",
+            "text": "Rien ne se voit encore, et c'est normal : la lumière agit en profondeur. Prenez une photo le premier jour, toujours dans la même lumière."
+          }
+        },
+        "t2": {
+          "type": "step",
+          "settings": {
+            "when": "Vers 4 semaines",
+            "title": "Les premiers changements",
+            "text": "Dans les études, c'est à ce moment que les premiers changements commencent à se mesurer, à raison de trois à cinq séances par semaine."
+          }
+        },
+        "t3": {
+          "type": "step",
+          "settings": {
+            "when": "Vers 8 semaines",
+            "title": "Le moment de comparer vos photos",
+            "text": "Comparez avec votre photo du premier jour. Dans les études, les changements continuent de progresser jusqu'à douze à seize semaines."
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {
+        "title": "Ce que vous verrez,",
+        "title_accent": "semaine après semaine.",
+        "text": "La lumière rouge ne change rien en une nuit. C'est la régularité qui compte.",
+        "note": "Repères tirés des études publiées sur la lumière rouge. Les résultats varient d'une personne à l'autre."
+      }
     }
   },
   "order": [
@@ -703,6 +743,7 @@
     "stats",
     "essentials",
     "ritual",
+    "timeline",
     "results",
     "reviews",
     "compare",
