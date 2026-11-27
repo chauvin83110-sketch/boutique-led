@@ -1,0 +1,59 @@
+{%- if section.settings.enabled -%}
+<dialog class="er-dialog er-popup" id="ErPopup" aria-labelledby="ErPopupTitle"
+  data-er-popup data-delay="{{ section.settings.delay }}" data-days="{{ section.settings.days }}">
+  <div class="er-dialog__inner er-popup__inner">
+    <button type="button" class="er-dialog__close" data-er-popup-close aria-label="Fermer">×</button>
+    {%- form 'customer', id: 'ErPopupForm', class: 'er-popup__form' -%}
+      {%- if form.posted_successfully? -%}
+        <div data-er-popup-done>
+          <p class="er-popup__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+          <h2 id="ErPopupTitle">{{ section.settings.done_title | escape }}</h2>
+          <p class="er-popup__text">{{ section.settings.done_text | escape }}</p>
+          <button type="button" class="er-button er-popup__button" data-er-popup-close>{{ section.settings.done_button | escape }}</button>
+        </div>
+      {%- else -%}
+        <p class="er-popup__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+        <h2 id="ErPopupTitle">{{ section.settings.title | escape }}</h2>
+        <p class="er-popup__text">{{ section.settings.text | escape }}</p>
+        <input type="hidden" name="contact[tags]" value="newsletter,popup-bienvenue">
+        <label class="er-popup__label" for="ErPopupEmail">{{ section.settings.label | escape }}</label>
+        <input class="er-popup__input" id="ErPopupEmail" type="email" name="contact[email]" required
+          autocomplete="email" inputmode="email" placeholder="prenom@exemple.fr"
+          {% if form.errors %}aria-invalid="true" aria-describedby="ErPopupError" data-er-popup-error{% endif %}>
+        {%- if form.errors -%}
+          <p class="er-popup__error" id="ErPopupError">{{ section.settings.error_text | escape }}</p>
+        {%- endif -%}
+        <button type="submit" class="er-button er-popup__button">{{ section.settings.button | escape }}</button>
+        <button type="button" class="er-popup__no" data-er-popup-close>{{ section.settings.decline | escape }}</button>
+        <p class="er-popup__legal">
+          {{ section.settings.legal | escape }}
+          {%- if shop.privacy_policy %} <a href="{{ shop.privacy_policy.url }}">Politique de confidentialité</a>{%- endif -%}
+        </p>
+      {%- endif -%}
+    {%- endform -%}
+  </div>
+</dialog>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Éclat Rubis : pop-up",
+  "settings": [
+    { "type": "checkbox", "id": "enabled", "label": "Afficher la pop-up", "default": true },
+    { "type": "range", "id": "delay", "label": "Apparaît après (secondes)", "min": 5, "max": 60, "step": 5, "default": 15 },
+    { "type": "range", "id": "days", "label": "Ne pas la remontrer avant (jours)", "min": 1, "max": 30, "step": 1, "default": 7 },
+    { "type": "text", "id": "eyebrow", "label": "Petite ligne du haut", "default": "Offre de bienvenue" },
+    { "type": "text", "id": "title", "label": "Titre", "default": "10 % offerts sur votre masque" },
+    { "type": "textarea", "id": "text", "label": "Texte", "default": "Laissez votre adresse e-mail. Nous vous envoyons votre code de réduction, à utiliser sur votre première commande." },
+    { "type": "text", "id": "label", "label": "Nom du champ", "default": "Votre adresse e-mail" },
+    { "type": "text", "id": "button", "label": "Bouton", "default": "Recevoir mon code" },
+    { "type": "text", "id": "decline", "label": "Lien pour refuser", "default": "Non merci" },
+    { "type": "textarea", "id": "legal", "label": "Mention sous le bouton", "default": "En validant, vous acceptez de recevoir les e-mails d'Éclat Rubis. Vous pouvez vous désinscrire à tout moment." },
+    { "type": "text", "id": "error_text", "label": "Message d'erreur", "default": "Cette adresse ne fonctionne pas. Vérifiez-la, ou essayez-en une autre." },
+    { "type": "header", "content": "Après l'inscription" },
+    { "type": "text", "id": "done_title", "label": "Titre", "default": "C'est noté, merci" },
+    { "type": "textarea", "id": "done_text", "label": "Texte", "default": "Votre code de 10 % arrive dans votre boîte mail. S'il n'y est pas dans quelques minutes, regardez dans vos courriers indésirables." },
+    { "type": "text", "id": "done_button", "label": "Bouton", "default": "Continuer" }
+  ]
+}
+{% endschema %}

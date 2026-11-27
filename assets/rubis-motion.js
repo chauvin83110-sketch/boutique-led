@@ -72,8 +72,36 @@
     });
   }
 
+  function initPopup() {
+    var d = document.querySelector('[data-er-popup]');
+    if (!d || !d.showModal) return;
+    var KEY = 'er-popup';
+    var store = { get: function () { try { return localStorage.getItem(KEY); } catch (e) { return null; } },
+                  set: function (v) { try { localStorage.setItem(KEY, v); } catch (e) {} } };
+    var done = d.querySelector('[data-er-popup-done]');
+    var open = function () { if (!d.open && !document.querySelector('dialog[open]')) d.showModal(); };
+    d.addEventListener('click', function (ev) {
+      if (ev.target === d || ev.target.closest('[data-er-popup-close]')) d.close();
+    });
+    d.addEventListener('close', function () { if (store.get() !== 'done') store.set(String(Date.now())); });
+    if (window.Shopify && Shopify.designMode) {
+      document.addEventListener('shopify:section:select', function (ev) { if (ev.target.contains(d)) open(); });
+      document.addEventListener('shopify:section:deselect', function (ev) { if (ev.target.contains(d) && d.open) d.close(); });
+      return;
+    }
+    if (done) { store.set('done'); open(); return; }
+    if (d.querySelector('[data-er-popup-error]')) { open(); return; }
+    var seen = store.get();
+    if (seen === 'done') return;
+    var days = parseFloat(d.getAttribute('data-days')) || 7;
+    if (seen && Date.now() - parseFloat(seen) < days * 864e5) return;
+    var delay = (parseFloat(d.getAttribute('data-delay')) || 15) * 1000;
+    setTimeout(open, delay);
+  }
+
   ready(function () {
     initDialogs();
+    initPopup();
     initGallery();
     initSticky();
     if (!window.gsap || !window.ScrollTrigger) {
