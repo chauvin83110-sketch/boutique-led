@@ -69,13 +69,6 @@
             "value": "30 jours"
           }
         },
-        "i3": {
-          "type": "included",
-          "settings": {
-            "label": "Droit de rétractation",
-            "value": "14 jours"
-          }
-        },
         "d1": {
           "type": "detail",
           "settings": {
@@ -102,6 +95,13 @@
           "settings": {
             "title": "Précautions",
             "text": "<p>Demandez d'abord l'avis de votre médecin si vous êtes enceinte, épileptique, sensible à la lumière, si vous suivez un traitement ou si vous avez une maladie des yeux ou de la peau. Le masque agit sur l'aspect de la peau. Ce n'est pas un dispositif médical.</p>"
+          }
+        },
+        "i3": {
+          "type": "included",
+          "settings": {
+            "label": "Paiement",
+            "value": "Sécurisé"
           }
         }
       },
