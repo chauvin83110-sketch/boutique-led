@@ -1,0 +1,34 @@
+<section class="er er-compare">
+  <div class="er__inner">
+    <h2 class="er-compare__title" data-er-reveal>{{ section.settings.title | escape }}</h2>
+    <div class="er-compare__grid">
+      <div class="er-compare__col" data-er-reveal>
+        <p class="er-compare__label">{{ section.settings.them_label | escape }}</p>
+        <div class="er-compare__amount"><span data-er-count="{{ section.settings.them_amount }}">{{ section.settings.them_amount }}</span> €</div>
+        <p class="er-compare__note">{{ section.settings.them_note | escape }}</p>
+      </div>
+      <div class="er-compare__col er-compare__col--us" data-er-reveal>
+        <p class="er-compare__label">{{ section.settings.us_label | escape }}</p>
+        <div class="er-compare__amount"><span data-er-count="{{ section.settings.us_amount }}">{{ section.settings.us_amount }}</span> €</div>
+        <p class="er-compare__note">{{ section.settings.us_note | escape }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Éclat Rubis : comparaison",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Titre", "default": "Le prix de trois ou quatre séances en institut." },
+    { "type": "text", "id": "them_label", "label": "Colonne 1 : libellé", "default": "10 séances de LED en institut" },
+    { "type": "number", "id": "them_amount", "label": "Colonne 1 : montant (€)", "default": 700 },
+    { "type": "text", "id": "them_note", "label": "Colonne 1 : précision", "default": "Environ 70 € la séance, sans compter les trajets." },
+    { "type": "text", "id": "us_label", "label": "Colonne 2 : libellé", "default": "Le masque, chez vous" },
+    { "type": "number", "id": "us_amount", "label": "Colonne 2 : montant (€)", "default": 249 },
+    { "type": "text", "id": "us_note", "label": "Colonne 2 : précision", "default": "Une fois, puis autant de séances que vous voulez." }
+  ],
+  "presets": [{ "name": "Éclat Rubis : comparaison" }]
+}
+{% endschema %}

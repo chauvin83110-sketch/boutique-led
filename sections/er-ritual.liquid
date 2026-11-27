@@ -1,0 +1,60 @@
+<section class="er er-ritual" aria-labelledby="ErRitual-{{ section.id }}">
+  <div class="er__inner er-ritual__grid">
+    <div>
+      <h2 class="er-ritual__title" id="ErRitual-{{ section.id }}">{{ section.settings.title | escape }}</h2>
+      <ol class="er-ritual__steps">
+        {%- for block in section.blocks -%}
+          <li class="er-ritual__step" {{ block.shopify_attributes }}>
+            <div>
+              <h3>{{ block.settings.title | escape }}</h3>
+              <p>{{ block.settings.text | escape }}</p>
+            </div>
+          </li>
+        {%- endfor -%}
+      </ol>
+    </div>
+    <div class="er-ritual__dial" role="img" aria-label="{{ section.settings.minutes }} minutes par séance">
+      <svg viewBox="0 0 200 200" aria-hidden="true">
+        <circle class="er-ritual__track" cx="100" cy="100" r="92"></circle>
+        <circle class="er-ritual__arc" cx="100" cy="100" r="92"></circle>
+      </svg>
+      <div class="er-ritual__time" aria-hidden="true">
+        <span class="er-ritual__minutes">{{ section.settings.minutes }}</span>
+        <span class="er-ritual__unit">minutes par séance</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Éclat Rubis : rituel",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Titre", "default": "Un rituel de 10 minutes, le soir." },
+    { "type": "number", "id": "minutes", "label": "Durée affichée (minutes)", "default": 10 }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Étape",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Titre" },
+        { "type": "text", "id": "text", "label": "Texte" }
+      ]
+    }
+  ],
+  "max_blocks": 5,
+  "presets": [
+    {
+      "name": "Éclat Rubis : rituel",
+      "blocks": [
+        { "type": "step", "settings": { "title": "Peau propre et sèche", "text": "Démaquillée, sans crème : la lumière passe mieux." } },
+        { "type": "step", "settings": { "title": "Mode rouge et infrarouge", "text": "Lumière rouge 630 nm et proche infrarouge 850 nm." } },
+        { "type": "step", "settings": { "title": "10 minutes, sans bouger de chez soi", "text": "On lit, on écoute un podcast. Le masque s'arrête tout seul." } },
+        { "type": "step", "settings": { "title": "Votre sérum habituel", "text": "3 à 5 fois par semaine, sur plusieurs semaines." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

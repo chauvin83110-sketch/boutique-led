@@ -1,0 +1,162 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "er-hero",
+      "settings": {
+        "product": "masque-led-lumiere-rouge-visage-et-cou"
+      }
+    },
+    "signs": {
+      "type": "er-signs",
+      "blocks": {
+        "s1": {
+          "type": "sign",
+          "settings": {
+            "title": "Le teint",
+            "text": "Plus terne le matin, même après une bonne nuit."
+          }
+        },
+        "s2": {
+          "type": "sign",
+          "settings": {
+            "title": "L'ovale",
+            "text": "Moins net qu'avant, surtout sur les photos de profil."
+          }
+        },
+        "s3": {
+          "type": "sign",
+          "settings": {
+            "title": "Le cou",
+            "text": "Il marque plus vite que le visage, et on l'oublie souvent."
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "settings": {}
+    },
+    "ritual": {
+      "type": "er-ritual",
+      "blocks": {
+        "r1": {
+          "type": "step",
+          "settings": {
+            "title": "Peau propre et sèche",
+            "text": "Démaquillée, sans crème : la lumière passe mieux."
+          }
+        },
+        "r2": {
+          "type": "step",
+          "settings": {
+            "title": "Mode rouge et infrarouge",
+            "text": "Lumière rouge 630 nm et proche infrarouge 850 nm."
+          }
+        },
+        "r3": {
+          "type": "step",
+          "settings": {
+            "title": "10 minutes, sans bouger de chez soi",
+            "text": "On lit, on écoute un podcast. Le masque s'arrête tout seul."
+          }
+        },
+        "r4": {
+          "type": "step",
+          "settings": {
+            "title": "Votre sérum habituel",
+            "text": "3 à 5 fois par semaine, sur plusieurs semaines."
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ],
+      "settings": {}
+    },
+    "compare": {
+      "type": "er-compare",
+      "settings": {}
+    },
+    "guarantee": {
+      "type": "er-guarantee",
+      "settings": {}
+    },
+    "faq": {
+      "type": "er-faq",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Est-ce que ça chauffe ?",
+            "answer": "<p>Non. La lumière est douce, on sent à peine une légère chaleur.</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Au bout de combien de temps voit-on un effet ?",
+            "answer": "<p>Chaque peau est différente. Il faut une utilisation régulière, 3 à 5 fois par semaine, sur plusieurs semaines.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "J'ai la peau sensible, est-ce adapté ?",
+            "answer": "<p>Il n'y a ni produit ni frottement. En cas de doute (photosensibilité, traitement, grossesse, épilepsie), demandez l'avis de votre médecin.</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "Quand vais-je le recevoir ?",
+            "answer": "<p>La livraison est offerte et suivie. Comptez 7 à 15 jours ouvrés.</p>"
+          }
+        },
+        "q5": {
+          "type": "question",
+          "settings": {
+            "question": "Et s'il ne me convient pas ?",
+            "answer": "<p>Vous avez 30 jours pour l'essayer. S'il ne vous convient pas, renvoyez-le et on vous rembourse.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5"
+      ],
+      "settings": {}
+    },
+    "cta": {
+      "type": "er-cta",
+      "settings": {
+        "product": "masque-led-lumiere-rouge-visage-et-cou"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "signs",
+    "ritual",
+    "compare",
+    "guarantee",
+    "faq",
+    "cta"
+  ]
+}
