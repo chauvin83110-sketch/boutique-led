@@ -1,0 +1,63 @@
+{%- comment -%}
+  Les images « maquette » sont des exemples générés. Tant que "mockup" est coché,
+  le bloc ne s'affiche que sur un thème non publié et dans l'éditeur.
+{%- endcomment -%}
+{%- assign show = true -%}
+{%- if section.settings.mockup and theme.role == 'main' -%}
+  {%- unless request.design_mode -%}{%- assign show = false -%}{%- endunless -%}
+{%- endif -%}
+{%- if show -%}
+<section class="er er-results">
+  <div class="er__inner">
+    <h2 class="er-results__title" data-er-reveal>{{ section.settings.title | escape }} <em>{{ section.settings.title_accent | escape }}</em></h2>
+    {%- if section.settings.text != blank -%}
+      <p class="er-results__text">{{ section.settings.text | escape }}</p>
+    {%- endif -%}
+    {%- if section.settings.mockup and section.settings.mockup_note != blank -%}
+      <p class="er-results__mockup">{{ section.settings.mockup_note | escape }}</p>
+    {%- endif -%}
+    <ul class="er-results__list" data-er-stagger>
+      {%- for block in section.blocks -%}
+        <li class="er-result" {{ block.shopify_attributes }}>
+          {%- if block.settings.image != blank -%}
+            {{ block.settings.image | image_url: width: 900 | image_tag: loading: 'lazy', alt: block.settings.caption, class: 'er-result__img' }}
+          {%- elsif block.settings.asset != blank -%}
+            <img class="er-result__img" src="{{ block.settings.asset | asset_url }}" alt="{{ block.settings.caption | escape }}" width="578" height="578" loading="lazy">
+          {%- endif -%}
+          <p class="er-result__caption">{{ block.settings.caption | escape }}</p>
+        </li>
+      {%- endfor -%}
+    </ul>
+    {%- if section.settings.note != blank -%}
+      <p class="er-results__note">{{ section.settings.note | escape }}</p>
+    {%- endif -%}
+  </div>
+</section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Éclat Rubis : avant-après",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Titre", "default": "Avant, après" },
+    { "type": "text", "id": "title_accent", "label": "Titre : mots en rubis", "default": "huit semaines" },
+    { "type": "textarea", "id": "text", "label": "Texte", "default": "Mêmes personnes, même lumière, sans retouche. Dix minutes par jour pendant huit semaines." },
+    { "type": "checkbox", "id": "mockup", "label": "Ce sont des exemples (bloc masqué sur le thème publié)", "default": true },
+    { "type": "text", "id": "mockup_note", "label": "Avertissement affiché tant que ce sont des exemples" },
+    { "type": "text", "id": "note", "label": "Note sous les photos", "default": "Les résultats varient d'une personne à l'autre." }
+  ],
+  "blocks": [
+    {
+      "type": "result",
+      "name": "Avant-après",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Photo (vraie photo)" },
+        { "type": "text", "id": "asset", "label": "Ou fichier d'exemple du thème" },
+        { "type": "text", "id": "caption", "label": "Légende", "default": "Contour de l'œil" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Éclat Rubis : avant-après" }]
+}
+{% endschema %}

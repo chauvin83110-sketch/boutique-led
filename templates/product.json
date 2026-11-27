@@ -604,6 +604,94 @@
         "title": "Ce soir, dix minutes pour vous.",
         "button_label": "Commander le masque, 249 €"
       }
+    },
+    "results": {
+      "type": "er-results",
+      "blocks": {
+        "p1": {
+          "type": "result",
+          "settings": {
+            "asset": "maquette-01-contour-oeil.jpg",
+            "caption": "Contour de l'œil"
+          }
+        },
+        "p2": {
+          "type": "result",
+          "settings": {
+            "asset": "maquette-02-sillons-bouche.jpg",
+            "caption": "Sillons autour de la bouche"
+          }
+        },
+        "p3": {
+          "type": "result",
+          "settings": {
+            "asset": "maquette-03-cou-machoire.jpg",
+            "caption": "Cou et mâchoire"
+          }
+        },
+        "p4": {
+          "type": "result",
+          "settings": {
+            "asset": "maquette-04-front.jpg",
+            "caption": "Front"
+          }
+        },
+        "p5": {
+          "type": "result",
+          "settings": {
+            "asset": "maquette-05-joue-pommette.jpg",
+            "caption": "Joue et pommette"
+          }
+        },
+        "p6": {
+          "type": "result",
+          "settings": {
+            "asset": "maquette-06-contour-des-yeux.jpg",
+            "caption": "Contour des yeux"
+          }
+        },
+        "p7": {
+          "type": "result",
+          "settings": {
+            "asset": "maquette-07-bouche-menton.jpg",
+            "caption": "Bouche et menton"
+          }
+        },
+        "p8": {
+          "type": "result",
+          "settings": {
+            "asset": "maquette-08-pattes-d-oie.jpg",
+            "caption": "Coin de l'œil"
+          }
+        },
+        "p9": {
+          "type": "result",
+          "settings": {
+            "asset": "maquette-09-cou-decollete.jpg",
+            "caption": "Cou et décolleté"
+          }
+        },
+        "p10": {
+          "type": "result",
+          "settings": {
+            "asset": "maquette-10-joue-sillon.jpg",
+            "caption": "Joue"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -614,6 +702,7 @@
     "stats",
     "essentials",
     "ritual",
+    "results",
     "reviews",
     "compare",
     "table",
