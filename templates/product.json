@@ -11,25 +11,6 @@
   "sections": {
     "main": {
       "type": "er-product",
-      "settings": {
-        "tag_1": "Visage et cou",
-        "tag_2": "10 minutes par séance",
-        "tag_3": "Sans fil",
-        "promise": "Revoyez dans le miroir la femme que vous étiez, en 10 minutes par jour.",
-        "price_note": "Livraison offerte, TVA incluse",
-        "offer_title": "Compris dans votre commande",
-        "button_label": "Ajouter au panier",
-        "show_payments": true,
-        "step_1_title": "Aujourd'hui",
-        "step_1_text": "Vous commandez",
-        "step_2_title": "Sous 1 à 3 jours",
-        "step_2_text": "Votre colis part",
-        "step_3_title": "7 à 15 jours ouvrés",
-        "step_3_text": "Il arrive chez vous",
-        "sticky_title": "Masque LED Éclat Rubis",
-        "sticky_note": "livraison offerte",
-        "sticky_button": "Ajouter"
-      },
       "blocks": {
         "c1": {
           "type": "check",
@@ -69,6 +50,13 @@
             "value": "30 jours"
           }
         },
+        "i3": {
+          "type": "included",
+          "settings": {
+            "label": "Paiement",
+            "value": "Sécurisé"
+          }
+        },
         "d1": {
           "type": "detail",
           "settings": {
@@ -96,13 +84,6 @@
             "title": "Précautions",
             "text": "<p>Demandez d'abord l'avis de votre médecin si vous êtes enceinte, épileptique, sensible à la lumière, si vous suivez un traitement ou si vous avez une maladie des yeux ou de la peau. Le masque agit sur l'aspect de la peau. Ce n'est pas un dispositif médical.</p>"
           }
-        },
-        "i3": {
-          "type": "included",
-          "settings": {
-            "label": "Paiement",
-            "value": "Sécurisé"
-          }
         }
       },
       "block_order": [
@@ -117,14 +98,29 @@
         "d2",
         "d3",
         "d4"
-      ]
+      ],
+      "settings": {
+        "tag_1": "Visage et cou",
+        "tag_2": "10 minutes par séance",
+        "tag_3": "Sans fil",
+        "promise": "Revoyez dans le miroir la femme que vous étiez, en 10 minutes par jour.",
+        "price_note": "Livraison offerte, TVA incluse",
+        "offer_title": "Compris dans votre commande",
+        "button_label": "Ajouter au panier",
+        "show_payments": true,
+        "step_1_title": "Aujourd'hui",
+        "step_1_text": "Vous commandez",
+        "step_2_title": "Sous 1 à 3 jours",
+        "step_2_text": "Votre colis part",
+        "step_3_title": "7 à 15 jours ouvrés",
+        "step_3_text": "Il arrive chez vous",
+        "sticky_title": "Masque LED Éclat Rubis",
+        "sticky_note": "livraison offerte",
+        "sticky_button": "Ajouter"
+      }
     },
     "signs": {
       "type": "er-signs",
-      "settings": {
-        "title": "Ce n'est pas dans votre tête.",
-        "text": "<p>Autour de la ménopause, la peau peut changer en quelques mois. La crème qui suffisait à 40 ans ne suffit plus. Beaucoup de femmes le vivent sans en parler.</p>"
-      },
       "blocks": {
         "s1": {
           "type": "sign",
@@ -152,278 +148,37 @@
         "s1",
         "s2",
         "s3"
-      ]
-    },
-    "essentials": {
-      "type": "er-essentials",
+      ],
       "settings": {
-        "title": "L'essentiel",
-        "title_accent": "en quatre points."
-      },
-      "blocks": {
-        "e1": {
-          "type": "point",
-          "settings": {
-            "icon": "light",
-            "title": "La lumière des instituts",
-            "text": "Lumière rouge (630 nm) et proche infrarouge (850 nm) : les deux lumières des soins LED en institut."
-          }
-        },
-        "e2": {
-          "type": "point",
-          "settings": {
-            "icon": "face",
-            "title": "Le visage et le cou",
-            "text": "Le masque descend sous le menton. Le cou est éclairé en même temps que le visage."
-          }
-        },
-        "e3": {
-          "type": "point",
-          "settings": {
-            "icon": "hands",
-            "title": "Les mains libres",
-            "text": "Il est souple et sans fil. Pendant la séance, vous faites ce que vous voulez."
-          }
-        },
-        "e4": {
-          "type": "point",
-          "settings": {
-            "icon": "shield",
-            "title": "30 jours pour juger",
-            "text": "Essayez-le chez vous. S'il ne vous convient pas, vous le renvoyez et nous vous remboursons."
-          }
-        }
-      },
-      "block_order": [
-        "e1",
-        "e2",
-        "e3",
-        "e4"
-      ]
-    },
-    "ritual": {
-      "type": "er-ritual",
-      "settings": {
-        "title": "Comment ça se passe : dix minutes, le soir.",
-        "minutes": 10
-      },
-      "blocks": {
-        "r1": {
-          "type": "step",
-          "settings": {
-            "title": "Lavez et séchez votre visage",
-            "text": "Sans crème ni maquillage, pour que la lumière arrive directement sur la peau."
-          }
-        },
-        "r2": {
-          "type": "step",
-          "settings": {
-            "title": "Posez le masque et allumez-le",
-            "text": "Choisissez le mode rouge et infrarouge. Il éclaire le visage et le cou."
-          }
-        },
-        "r3": {
-          "type": "step",
-          "settings": {
-            "title": "Laissez-le dix minutes",
-            "text": "Il tient tout seul. Vous lisez, vous regardez un épisode ou vous fermez les yeux."
-          }
-        },
-        "r4": {
-          "type": "step",
-          "settings": {
-            "title": "Mettez ensuite votre crème habituelle",
-            "text": "Recommencez trois à cinq soirs par semaine. La régularité compte plus que la durée."
-          }
-        }
-      },
-      "block_order": [
-        "r1",
-        "r2",
-        "r3",
-        "r4"
-      ]
-    },
-    "compare": {
-      "type": "er-compare",
-      "settings": {
-        "title": "Le prix de trois ou quatre séances en institut.",
-        "them_label": "10 séances de lumière LED en institut",
-        "them_amount": 700,
-        "them_note": "Une séance coûte 50 à 90 € selon l'institut. Il faut ajouter les trajets.",
-        "us_label": "Le masque Éclat Rubis",
-        "us_amount": 249,
-        "us_note": "Vous payez une fois. Ensuite, vous faites autant de séances que vous voulez."
-      }
-    },
-    "table": {
-      "type": "er-table",
-      "settings": {
-        "title": "Le masque",
-        "title_accent": "ou l'institut ?",
-        "us": "Éclat Rubis",
-        "them": "Institut",
-        "note": "Prix d'une séance de LED relevés dans des instituts en France : 50 à 90 €."
-      },
-      "blocks": {
-        "t1": {
-          "type": "row",
-          "settings": {
-            "label": "Prix",
-            "us": "249 €, une seule fois",
-            "them": "50 à 90 € la séance"
-          }
-        },
-        "t2": {
-          "type": "row",
-          "settings": {
-            "label": "Où",
-            "us": "Chez vous",
-            "them": "Sur place"
-          }
-        },
-        "t3": {
-          "type": "row",
-          "settings": {
-            "label": "Rendez-vous",
-            "us": "Aucun",
-            "them": "À chaque séance"
-          }
-        },
-        "t4": {
-          "type": "row",
-          "settings": {
-            "label": "Quand",
-            "us": "Le soir qui vous arrange",
-            "them": "Aux horaires d'ouverture"
-          }
-        },
-        "t5": {
-          "type": "row",
-          "settings": {
-            "label": "Séances",
-            "us": "Autant que vous voulez",
-            "them": "Payées une par une"
-          }
-        }
-      },
-      "block_order": [
-        "t1",
-        "t2",
-        "t3",
-        "t4",
-        "t5"
-      ]
-    },
-    "guarantee": {
-      "type": "er-guarantee",
-      "settings": {
-        "days": 30,
-        "title": "Essayez-le pendant 30 jours.",
-        "text": "<p>Utilisez le masque chez vous pendant un mois. S'il ne vous convient pas, écrivez-nous et renvoyez-le : nous vous remboursons. Ces 30 jours s'ajoutent aux 14 jours de rétractation prévus par la loi.</p>",
-        "link_label": "Lire la politique de retour"
-      }
-    },
-    "faq": {
-      "type": "er-faq",
-      "settings": {
-        "title": "Vos questions"
-      },
-      "blocks": {
-        "q1": {
-          "type": "question",
-          "settings": {
-            "question": "Quand verrai-je des résultats ?",
-            "answer": "<p>La lumière rouge ne fait pas de miracle en une nuit. Elle agit en profondeur, et c'est la régularité qui compte. Dans les études, les premiers changements se mesurent entre 4 et 8 semaines, et ils continuent de progresser jusqu'à 12 à 16 semaines.</p><p>Comptez 10 minutes, 3 à 5 fois par semaine. Prenez une photo le premier jour, dans la même lumière : c'est en comparant que vous verrez la différence.</p>"
-          }
-        },
-        "q2": {
-          "type": "question",
-          "settings": {
-            "question": "Est-ce que ça chauffe ?",
-            "answer": "<p>Non. Vous sentez au plus une légère tiédeur.</p>"
-          }
-        },
-        "q3": {
-          "type": "question",
-          "settings": {
-            "question": "Est-ce sans danger ?",
-            "answer": "<p>La lumière LED rouge et infrarouge ne contient pas d'UV et ne chauffe pas la peau. Une revue de 8 études sur les masques à domicile (365 participantes) n'a relevé que des effets indésirables rares, légers et passagers. Une autre revue n'a trouvé aucun lien entre cette lumière et un risque de cancer de la peau.</p><p>Par précaution, demandez l'avis de votre médecin si vous êtes enceinte, si vous prenez un médicament photosensibilisant, si vous avez des antécédents d'épilepsie ou une maladie des yeux. Gardez les yeux fermés pendant la séance.</p>"
-          }
-        },
-        "q4": {
-          "type": "question",
-          "settings": {
-            "question": "J'ai la peau sensible, est-ce adapté ?",
-            "answer": "<p>Le masque n'utilise ni produit ni frottement. En cas de doute, demandez l'avis de votre dermatologue avant de commencer.</p>"
-          }
-        },
-        "q5": {
-          "type": "question",
-          "settings": {
-            "question": "Quand vais-je le recevoir ?",
-            "answer": "<p>Entre 7 et 15 jours ouvrés après votre commande. La livraison est offerte. Vous recevez un numéro de suivi par e-mail dès que le colis part.</p>"
-          }
-        },
-        "q6": {
-          "type": "question",
-          "settings": {
-            "question": "Et s'il ne me convient pas ?",
-            "answer": "<p>Vous avez 30 jours après la réception pour l'essayer. S'il ne vous convient pas, écrivez-nous et renvoyez-le : nous vous remboursons. Les frais de retour sont à votre charge.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "q1",
-        "q2",
-        "q3",
-        "q4",
-        "q5",
-        "q6"
-      ]
-    },
-    "cta": {
-      "type": "er-cta",
-      "settings": {
-        "product": "masque-led-lumiere-rouge-visage-et-cou",
-        "title": "Ce soir, dix minutes pour vous.",
-        "button_label": "Commander le masque, 249 €",
-        "note": "Appareil à usage esthétique, sans finalité médicale."
+        "title": "Ce n'est pas dans votre tête.",
+        "text": "<p>Autour de la ménopause, la peau peut changer en quelques mois. La crème qui suffisait à 40 ans ne suffit plus. Beaucoup de femmes le vivent sans en parler.</p>"
       }
     },
     "menopause": {
       "type": "er-text",
       "settings": {
-        "dark": false,
         "title": "Pourquoi votre peau change autant en ce moment",
-        "text": "<p>Quand les œstrogènes baissent, la peau perd une part importante de son collagène dans les premières années de la ménopause. C'est pour ça que vous avez l'impression que tout s'est accéléré.</p><p>Des chercheurs ont testé un masque à lumière rouge chez 95 femmes de 45 à 60 ans. Après 4 semaines, les rides du front et du contour de l'œil étaient plus courtes qu'avec un faux masque, et 8 femmes sur 10 se disaient satisfaites de leur visage.</p>"
+        "text": "<p>Quand les œstrogènes baissent, la peau perd une part importante de son collagène dans les premières années de la ménopause. C'est pour ça que vous avez l'impression que tout s'est accéléré.</p><p>Des chercheurs ont testé un masque à lumière rouge chez 95 femmes de 45 à 60 ans. Après 4 semaines, les rides du front et du contour de l'œil étaient plus courtes qu'avec un faux masque, et 8 femmes sur 10 se disaient satisfaites de leur visage.</p>",
+        "dark": false
       }
     },
     "science": {
       "type": "er-text",
       "settings": {
-        "dark": true,
         "title": "Ce que la lumière rouge fait à votre peau",
-        "text": "<p>Avec les années, et encore plus à la ménopause, la peau fabrique moins de collagène. Elle devient plus fine, moins ferme, et les rides se creusent.</p><p>La lumière rouge (630 nm) et proche infrarouge (850 nm) pénètre la peau sans la chauffer ni l'abîmer. Elle redonne de l'énergie aux cellules qui fabriquent le collagène et l'élastine. Les chercheurs appellent ça la photobiomodulation. Elle est étudiée depuis plus de 20 ans.</p><p>Le rouge agit en surface, sur l'éclat et le grain de la peau. Le proche infrarouge va plus profond, là où se trouvent les fibres de collagène. C'est pour ça que le masque Éclat Rubis réunit les deux.</p>"
+        "text": "<p>Avec les années, et encore plus à la ménopause, la peau fabrique moins de collagène. Elle devient plus fine, moins ferme, et les rides se creusent.</p><p>La lumière rouge (630 nm) et proche infrarouge (850 nm) pénètre la peau sans la chauffer ni l'abîmer. Elle redonne de l'énergie aux cellules qui fabriquent le collagène et l'élastine. Les chercheurs appellent ça la photobiomodulation. Elle est étudiée depuis plus de 20 ans.</p><p>Le rouge agit en surface, sur l'éclat et le grain de la peau. Le proche infrarouge va plus profond, là où se trouvent les fibres de collagène. C'est pour ça que le masque Éclat Rubis réunit les deux.</p>",
+        "dark": true
       }
     },
     "stats": {
       "type": "er-stats",
-      "settings": {
-        "title": "Ce que les études montrent",
-        "title_accent": "sur la lumière rouge",
-        "more_label": "En savoir plus",
-        "sources_title": "D'où viennent ces chiffres ?",
-        "sources_intro": "<p>La lumière rouge et proche infrarouge est étudiée depuis plus de 20 ans par des universités et des dermatologues. Voici les études publiées dont viennent les chiffres de notre page. Elles portent sur la lumière rouge en général, avec différents appareils. Les résultats varient d'une personne à l'autre.</p>",
-        "sources_note": "Le masque Éclat Rubis utilise les longueurs d'onde étudiées (630 nm et 850 nm). Appareil à usage esthétique, sans finalité médicale."
-      },
       "blocks": {
         "n1": {
           "type": "stat",
           "settings": {
             "prefix": "−",
             "number": 30,
-            "suffix": " %",
+            "suffix": "%",
             "text": "de volume des rides autour des yeux, en 4 semaines, chez 137 femmes de 40 à 65 ans."
           }
         },
@@ -432,7 +187,7 @@
           "settings": {
             "prefix": "",
             "number": 86,
-            "suffix": " %",
+            "suffix": "%",
             "text": "des utilisatrices ont vu leurs pattes d'oie s'améliorer en 16 semaines, avec un masque 630 + 850 nm, contre un faux masque."
           }
         },
@@ -441,7 +196,7 @@
           "settings": {
             "prefix": "+",
             "number": 19,
-            "suffix": " %",
+            "suffix": "%",
             "text": "d'élasticité et plus de fibres de collagène observées, avec le rouge et l'infrarouge combinés."
           }
         },
@@ -504,7 +259,105 @@
         "o4",
         "o5",
         "o6"
-      ]
+      ],
+      "settings": {
+        "title": "Ce que les études montrent",
+        "title_accent": "sur la lumière rouge",
+        "more_label": "En savoir plus",
+        "sources_title": "D'où viennent ces chiffres ?",
+        "sources_intro": "<p>La lumière rouge et proche infrarouge est étudiée depuis plus de 20 ans par des universités et des dermatologues. Voici les études publiées dont viennent les chiffres de notre page. Elles portent sur la lumière rouge en général, avec différents appareils. Les résultats varient d'une personne à l'autre.</p>",
+        "sources_note": "Le masque Éclat Rubis utilise les longueurs d'onde étudiées (630 nm et 850 nm). Appareil à usage esthétique, sans finalité médicale."
+      }
+    },
+    "essentials": {
+      "type": "er-essentials",
+      "blocks": {
+        "e1": {
+          "type": "point",
+          "settings": {
+            "icon": "light",
+            "title": "La lumière des instituts",
+            "text": "Lumière rouge (630 nm) et proche infrarouge (850 nm) : les deux lumières des soins LED en institut."
+          }
+        },
+        "e2": {
+          "type": "point",
+          "settings": {
+            "icon": "face",
+            "title": "Le visage et le cou",
+            "text": "Le masque descend sous le menton. Le cou est éclairé en même temps que le visage."
+          }
+        },
+        "e3": {
+          "type": "point",
+          "settings": {
+            "icon": "hands",
+            "title": "Les mains libres",
+            "text": "Il est souple et sans fil. Pendant la séance, vous faites ce que vous voulez."
+          }
+        },
+        "e4": {
+          "type": "point",
+          "settings": {
+            "icon": "shield",
+            "title": "30 jours pour juger",
+            "text": "Essayez-le chez vous. S'il ne vous convient pas, vous le renvoyez et nous vous remboursons."
+          }
+        }
+      },
+      "block_order": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "settings": {
+        "title": "L'essentiel",
+        "title_accent": "en quatre points."
+      }
+    },
+    "ritual": {
+      "type": "er-ritual",
+      "blocks": {
+        "r1": {
+          "type": "step",
+          "settings": {
+            "title": "Lavez et séchez votre visage",
+            "text": "Sans crème ni maquillage, pour que la lumière arrive directement sur la peau."
+          }
+        },
+        "r2": {
+          "type": "step",
+          "settings": {
+            "title": "Posez le masque et allumez-le",
+            "text": "Choisissez le mode rouge et infrarouge. Il éclaire le visage et le cou."
+          }
+        },
+        "r3": {
+          "type": "step",
+          "settings": {
+            "title": "Laissez-le dix minutes",
+            "text": "Il tient tout seul. Vous lisez, vous regardez un épisode ou vous fermez les yeux."
+          }
+        },
+        "r4": {
+          "type": "step",
+          "settings": {
+            "title": "Mettez ensuite votre crème habituelle",
+            "text": "Recommencez trois à cinq soirs par semaine. La régularité compte plus que la durée."
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ],
+      "settings": {
+        "title": "Comment ça se passe : dix minutes, le soir.",
+        "minutes": 10
+      }
     },
     "reviews": {
       "type": "er-reviews",
@@ -596,12 +449,160 @@
       "settings": {
         "title": "Ce qu'en disent",
         "title_accent": "celles et ceux qui l'utilisent",
-        "origin": "Avis d'acheteurs du même masque, recueillis par le fabricant.",
+        "origin": "Avis d'acheteurs du masque, recueillis par le fabricant.",
         "more_label": "En savoir plus",
         "score": "4,9 sur 5",
-        "score_note": "60 avis sur la boutique du fabricant, au 27 novembre 2026",
+        "score_note": "60 avis sur la boutique du fabricant",
         "dialog_title": "D'où viennent ces avis ?",
         "dialog_text": "<p>Notre boutique vient d'ouvrir. Nous n'avons pas encore d'avis de nos propres clientes.</p><p>Les avis affichés ici ont été laissés par des acheteurs du même masque sur la boutique en ligne de son fabricant. Ce ne sont pas des avis de clientes Éclat Rubis, et nous ne les avons pas vérifiés nous-mêmes.</p><p>Nous les reprenons tels quels, sans rien ajouter. Ceux qui étaient écrits dans une autre langue sont traduits. Nous affichons aussi les avis moins bons.</p><p>La note de 4,9 sur 5 est celle affichée par le fabricant pour 60 avis, relevée le 27 novembre 2026.</p><p>Dès que nos clientes nous donneront leur avis, il prendra la place de ceux-ci.</p>"
+      }
+    },
+    "compare": {
+      "type": "er-compare",
+      "settings": {
+        "title": "Le prix de trois ou quatre séances en institut.",
+        "them_label": "10 séances de lumière LED en institut",
+        "them_amount": 700,
+        "them_note": "Une séance coûte 50 à 90 € selon l'institut. Il faut ajouter les trajets.",
+        "us_label": "Le masque Éclat Rubis",
+        "us_amount": 249,
+        "us_note": "Vous payez une fois. Ensuite, vous faites autant de séances que vous voulez."
+      }
+    },
+    "table": {
+      "type": "er-table",
+      "blocks": {
+        "t1": {
+          "type": "row",
+          "settings": {
+            "label": "Prix",
+            "us": "249 €, une seule fois",
+            "them": "50 à 90 € la séance"
+          }
+        },
+        "t2": {
+          "type": "row",
+          "settings": {
+            "label": "Où",
+            "us": "Chez vous",
+            "them": "Sur place"
+          }
+        },
+        "t3": {
+          "type": "row",
+          "settings": {
+            "label": "Rendez-vous",
+            "us": "Aucun",
+            "them": "À chaque séance"
+          }
+        },
+        "t4": {
+          "type": "row",
+          "settings": {
+            "label": "Quand",
+            "us": "Le soir qui vous arrange",
+            "them": "Aux horaires d'ouverture"
+          }
+        },
+        "t5": {
+          "type": "row",
+          "settings": {
+            "label": "Séances",
+            "us": "Autant que vous voulez",
+            "them": "Payées une par une"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "settings": {
+        "title": "Le masque",
+        "title_accent": "ou l'institut ?",
+        "us": "Éclat Rubis",
+        "them": "Institut",
+        "note": "Prix d'une séance de LED relevés dans des instituts en France : 50 à 90 €."
+      }
+    },
+    "guarantee": {
+      "type": "er-guarantee",
+      "settings": {
+        "days": 30,
+        "title": "Essayez-le pendant 30 jours.",
+        "text": "<p>Utilisez le masque chez vous pendant un mois. S'il ne vous convient pas, écrivez-nous et renvoyez-le : nous vous remboursons. Ces 30 jours s'ajoutent aux 14 jours de rétractation prévus par la loi.</p>",
+        "link_label": "Lire la politique de retour",
+        "link": ""
+      }
+    },
+    "faq": {
+      "type": "er-faq",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Quand verrai-je des résultats ?",
+            "answer": "<p>La lumière rouge ne fait pas de miracle en une nuit. Elle agit en profondeur, et c'est la régularité qui compte. Dans les études, les premiers changements se mesurent entre 4 et 8 semaines, et ils continuent de progresser jusqu'à 12 à 16 semaines.</p><p>Comptez 10 minutes, 3 à 5 fois par semaine. Prenez une photo le premier jour, dans la même lumière : c'est en comparant que vous verrez la différence.</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Est-ce que ça chauffe ?",
+            "answer": "<p>Non. Vous sentez au plus une légère tiédeur.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Est-ce sans danger ?",
+            "answer": "<p>La lumière LED rouge et infrarouge ne contient pas d'UV et ne chauffe pas la peau. Une revue de 8 études sur les masques à domicile (365 participantes) n'a relevé que des effets indésirables rares, légers et passagers. Une autre revue n'a trouvé aucun lien entre cette lumière et un risque de cancer de la peau.</p><p>Par précaution, demandez l'avis de votre médecin si vous êtes enceinte, si vous prenez un médicament photosensibilisant, si vous avez des antécédents d'épilepsie ou une maladie des yeux. Gardez les yeux fermés pendant la séance.</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "J'ai la peau sensible, est-ce adapté ?",
+            "answer": "<p>Le masque n'utilise ni produit ni frottement. En cas de doute, demandez l'avis de votre dermatologue avant de commencer.</p>"
+          }
+        },
+        "q5": {
+          "type": "question",
+          "settings": {
+            "question": "Quand vais-je le recevoir ?",
+            "answer": "<p>Entre 7 et 15 jours ouvrés après votre commande. La livraison est offerte. Vous recevez un numéro de suivi par e-mail dès que le colis part.</p>"
+          }
+        },
+        "q6": {
+          "type": "question",
+          "settings": {
+            "question": "Et s'il ne me convient pas ?",
+            "answer": "<p>Vous avez 30 jours après la réception pour l'essayer. S'il ne vous convient pas, écrivez-nous et renvoyez-le : nous vous remboursons. Les frais de retour sont à votre charge.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "settings": {
+        "title": "Vos questions"
+      }
+    },
+    "cta": {
+      "type": "er-cta",
+      "settings": {
+        "product": "masque-led-lumiere-rouge-visage-et-cou",
+        "note": "Appareil à usage esthétique, sans finalité médicale.",
+        "title": "Ce soir, dix minutes pour vous.",
+        "button_label": "Commander le masque, 249 €"
       }
     }
   },
