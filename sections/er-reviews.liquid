@@ -1,3 +1,8 @@
+{%- assign show = true -%}
+{%- if section.settings.mockup and theme.role == 'main' -%}
+  {%- unless request.design_mode -%}{%- assign show = false -%}{%- endunless -%}
+{%- endif -%}
+{%- if show -%}
 <section class="er er-reviews">
   <div class="er__inner">
     <h2 class="er-reviews__title" data-er-reveal>{{ section.settings.title | escape }} <em>{{ section.settings.title_accent | escape }}</em></h2>
@@ -37,6 +42,7 @@
     </div>
   </dialog>
 </section>
+{%- endif -%}
 
 {% schema %}
 {
@@ -45,6 +51,7 @@
   "settings": [
     { "type": "text", "id": "title", "label": "Titre", "default": "Ce qu'en disent" },
     { "type": "text", "id": "title_accent", "label": "Titre : mots en rubis", "default": "celles et ceux qui l'utilisent" },
+    { "type": "checkbox", "id": "mockup", "label": "Ce sont des exemples (bloc masqué sur le thème publié)", "default": false },
     { "type": "text", "id": "origin", "label": "Origine des avis (toujours affichée)", "default": "Avis d'acheteurs du même masque, recueillis par le fabricant." },
     { "type": "text", "id": "more_label", "label": "Lien", "default": "En savoir plus" },
     { "type": "text", "id": "score", "label": "Note", "default": "4,9 sur 5" },

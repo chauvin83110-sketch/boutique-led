@@ -454,7 +454,8 @@
         "score": "4,9 sur 5",
         "score_note": "60 avis sur la boutique du fabricant",
         "dialog_title": "D'où viennent ces avis ?",
-        "dialog_text": "<p>Notre boutique vient d'ouvrir. Nous n'avons pas encore d'avis de nos propres clientes.</p><p>Les avis affichés ici ont été laissés par des acheteurs du même masque sur la boutique en ligne de son fabricant. Ce ne sont pas des avis de clientes Éclat Rubis, et nous ne les avons pas vérifiés nous-mêmes.</p><p>Nous les reprenons tels quels, sans rien ajouter. Ceux qui étaient écrits dans une autre langue sont traduits. Nous affichons aussi les avis moins bons.</p><p>La note de 4,9 sur 5 est celle affichée par le fabricant pour 60 avis, relevée le 27 novembre 2026.</p><p>Dès que nos clientes nous donneront leur avis, il prendra la place de ceux-ci.</p>"
+        "dialog_text": "<p>Notre boutique vient d'ouvrir. Nous n'avons pas encore d'avis de nos propres clientes.</p><p>Les avis affichés ici ont été laissés par des acheteurs du même masque sur la boutique en ligne de son fabricant. Ce ne sont pas des avis de clientes Éclat Rubis, et nous ne les avons pas vérifiés nous-mêmes.</p><p>Nous les reprenons tels quels, sans rien ajouter. Ceux qui étaient écrits dans une autre langue sont traduits. Nous affichons aussi les avis moins bons.</p><p>La note de 4,9 sur 5 est celle affichée par le fabricant pour 60 avis, relevée le 27 novembre 2026.</p><p>Dès que nos clientes nous donneront leur avis, il prendra la place de ceux-ci.</p>",
+        "mockup": true
       }
     },
     "compare": {
