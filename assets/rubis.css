@@ -117,6 +117,14 @@
 }
 .er-hero__media svg { background: rgba(251, 237, 234, 0.06); fill: rgba(251, 237, 234, 0.25); }
 
+.er-hero__empty {
+  width: 100%; height: 100%; border-radius: 200px 200px 24px 24px;
+  background: rgba(251, 237, 234, 0.06); border: 1px solid rgba(247, 222, 218, 0.18);
+  display: grid; place-content: center; justify-items: center; gap: 12px;
+  font-size: 14px; color: var(--er-champagne);
+}
+.er-hero__empty img { width: 72px; height: 72px; border-radius: 12px; }
+
 /* ---------- Ce n'est pas dans votre tête ---------- */
 .er-signs { padding-block: clamp(72px, 10vw, 140px); }
 .er-signs__head { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 5vw, 80px); align-items: end; }
