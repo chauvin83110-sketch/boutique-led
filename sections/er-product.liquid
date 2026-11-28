@@ -101,8 +101,28 @@
       <ol class="er-timeline" data-er-timeline aria-label="Livraison">
         <li><span class="er-timeline__dot"></span><strong>{{ section.settings.step_1_title | escape }}</strong><span>{{ section.settings.step_1_text | escape }}</span></li>
         <li><span class="er-timeline__dot"></span><strong>{{ section.settings.step_2_title | escape }}</strong><span>{{ section.settings.step_2_text | escape }}</span></li>
-        <li><span class="er-timeline__dot"></span><strong>{{ section.settings.step_3_title | escape }}</strong><span>{{ section.settings.step_3_text | escape }}</span></li>
+        <li><span class="er-timeline__dot"></span><strong data-er-delivery data-min="{{ section.settings.delivery_min }}" data-max="{{ section.settings.delivery_max }}">{{ section.settings.step_3_title | escape }}</strong><span>{{ section.settings.step_3_text | escape }}</span></li>
       </ol>
+      {%- if section.settings.delivery_dates -%}
+      <script>
+        (function () {
+          var el = document.currentScript.previousElementSibling.querySelector('[data-er-delivery]');
+          if (!el) return;
+          var min = parseInt(el.dataset.min, 10), max = parseInt(el.dataset.max, 10);
+          if (!(min > 0) || !(max >= min)) return;
+          function addBusinessDays(date, n) {
+            var d = new Date(date);
+            while (n > 0) { d.setDate(d.getDate() + 1); var w = d.getDay(); if (w !== 0 && w !== 6) n--; }
+            return d;
+          }
+          var now = new Date();
+          var a = addBusinessDays(now, min), b = addBusinessDays(now, max);
+          var fmt = function (d, withMonth) { return d.toLocaleDateString('fr-FR', withMonth ? { day: 'numeric', month: 'long' } : { day: 'numeric' }); };
+          var sameMonth = a.getMonth() === b.getMonth();
+          el.textContent = 'Entre le ' + fmt(a, !sameMonth) + ' et le ' + fmt(b, true);
+        })();
+      </script>
+      {%- endif -%}
 
       <div class="er-buy__details">
         {%- for block in section.blocks -%}
@@ -150,6 +170,9 @@
     { "type": "text", "id": "step_2_text", "label": "Étape 2 : texte", "default": "Colis expédié" },
     { "type": "text", "id": "step_3_title", "label": "Étape 3", "default": "7 à 15 jours ouvrés" },
     { "type": "text", "id": "step_3_text", "label": "Étape 3 : texte", "default": "Chez vous" },
+    { "type": "checkbox", "id": "delivery_dates", "label": "Étape 3 : afficher des dates de livraison calculées chaque jour", "default": true },
+    { "type": "number", "id": "delivery_min", "label": "Délai minimum (jours ouvrés)", "default": 7 },
+    { "type": "number", "id": "delivery_max", "label": "Délai maximum (jours ouvrés)", "default": 15 },
     { "type": "header", "content": "Barre fixe sur téléphone" },
     { "type": "text", "id": "sticky_title", "label": "Nom court", "default": "Masque LED Éclat Rubis" },
     { "type": "text", "id": "sticky_note", "label": "Précision", "default": "livraison offerte" },

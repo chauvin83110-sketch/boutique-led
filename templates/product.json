@@ -114,6 +114,9 @@
         "step_2_text": "Votre colis part",
         "step_3_title": "7 à 15 jours ouvrés",
         "step_3_text": "Il arrive chez vous",
+        "delivery_dates": true,
+        "delivery_min": 7,
+        "delivery_max": 15,
         "sticky_title": "Masque LED Éclat Rubis",
         "sticky_note": "livraison offerte",
         "sticky_button": "Ajouter"
