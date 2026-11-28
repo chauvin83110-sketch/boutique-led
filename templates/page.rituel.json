@@ -1,0 +1,244 @@
+{
+  "sections": {
+    "hero": {
+      "type": "er-hero",
+      "settings": {
+        "product": "masque-led-lumiere-rouge-visage-et-cou",
+        "heading_tag": "h1",
+        "line_1": "Le rituel",
+        "line_2": "des 10 minutes,",
+        "line_3": "rien que pour vous.",
+        "text": "<p>Vous l'avez demandé en commentaire, le voici. Un moment à vous chaque soir, et la lumière rouge des instituts, chez vous, pour le visage et le cou.</p>",
+        "button_label": "Voir le masque du rituel",
+        "proof_1": "Satisfaite ou remboursée 30 jours",
+        "proof_2": "Livraison offerte et suivie",
+        "proof_3": "Visage et cou en une séance"
+      }
+    },
+    "ritual": {
+      "type": "er-ritual",
+      "settings": {
+        "title": "Le rituel, étape par étape.",
+        "minutes": 10
+      },
+      "blocks": {
+        "r1": {
+          "type": "step",
+          "settings": {
+            "title": "Le soir, peau propre et sèche",
+            "text": "Démaquillée, sans crème : la lumière passe mieux."
+          }
+        },
+        "r2": {
+          "type": "step",
+          "settings": {
+            "title": "Installez-vous, téléphone posé",
+            "text": "Canapé, lit, une tisane à côté. Ces dix minutes sont à vous."
+          }
+        },
+        "r3": {
+          "type": "step",
+          "settings": {
+            "title": "10 minutes de lumière rouge",
+            "text": "Sur le visage et le cou, les yeux fermés. Vous respirez, personne ne vous appelle."
+          }
+        },
+        "r4": {
+          "type": "step",
+          "settings": {
+            "title": "Votre sérum habituel",
+            "text": "En massant doucement vers le haut, cou compris."
+          }
+        },
+        "r5": {
+          "type": "step",
+          "settings": {
+            "title": "3 à 5 soirs par semaine",
+            "text": "La régularité compte plus que la durée. On regarde la peau évoluer au fil des semaines."
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5"
+      ]
+    },
+    "science": {
+      "type": "er-text",
+      "settings": {
+        "dark": true,
+        "title": "La technique : pourquoi la lumière rouge",
+        "text": "<p>Avec les années, et encore plus à la ménopause, la peau fabrique moins de collagène. Elle devient plus fine, moins ferme, et les rides se creusent.</p><p>La lumière rouge (630 nm) et proche infrarouge (850 nm) pénètre la peau sans la chauffer ni l'abîmer. Elle redonne de l'énergie aux cellules qui fabriquent le collagène et l'élastine. Les chercheurs appellent ça la photobiomodulation. Elle est étudiée depuis plus de 20 ans.</p><p>Le rouge agit en surface, sur l'éclat et le grain de la peau. Le proche infrarouge va plus profond, là où se trouvent les fibres de collagène. C'est pour ça que le masque Éclat Rubis réunit les deux.</p>"
+      }
+    },
+    "stats": {
+      "type": "er-stats",
+      "settings": {
+        "title": "Ce que les études montrent",
+        "title_accent": "sur la lumière rouge",
+        "more_label": "En savoir plus",
+        "sources_title": "D'où viennent ces chiffres ?",
+        "sources_intro": "<p>La lumière rouge et proche infrarouge est étudiée depuis plus de 20 ans par des universités et des dermatologues. Voici les études publiées dont viennent les chiffres de notre page. Elles portent sur la lumière rouge en général, avec différents appareils. Les résultats varient d'une personne à l'autre.</p>",
+        "sources_note": "Le masque Éclat Rubis utilise les longueurs d'onde étudiées (630 nm et 850 nm). Appareil à usage esthétique, sans finalité médicale."
+      },
+      "blocks": {
+        "n1": {
+          "type": "stat",
+          "settings": {
+            "prefix": "−",
+            "number": 30,
+            "suffix": " %",
+            "text": "de volume des rides autour des yeux, en 4 semaines, chez 137 femmes de 40 à 65 ans."
+          }
+        },
+        "n2": {
+          "type": "stat",
+          "settings": {
+            "prefix": "",
+            "number": 86,
+            "suffix": " %",
+            "text": "des utilisatrices ont vu leurs pattes d'oie s'améliorer en 16 semaines, avec un masque 630 + 850 nm, contre un faux masque."
+          }
+        },
+        "n3": {
+          "type": "stat",
+          "settings": {
+            "prefix": "+",
+            "number": 19,
+            "suffix": " %",
+            "text": "d'élasticité et plus de fibres de collagène observées, avec le rouge et l'infrarouge combinés."
+          }
+        },
+        "o1": {
+          "type": "source",
+          "settings": {
+            "claim": "−30 % de volume des rides autour des yeux en 4 semaines.",
+            "detail": "Essai randomisé, 137 femmes de 40 à 65 ans, lumière 660 nm. Mota et al., Photobiomodulation, Photomedicine and Laser Surgery, 2023.",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/36780572/"
+          }
+        },
+        "o2": {
+          "type": "source",
+          "settings": {
+            "claim": "86 % des pattes d'oie améliorées en 16 semaines.",
+            "detail": "Essai randomisé en double aveugle contre un faux masque, 60 personnes, 630 + 850 nm. Park et al., Medicine, 2025.",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/39960921/"
+          }
+        },
+        "o3": {
+          "type": "source",
+          "settings": {
+            "claim": "Jusqu'à −36 % de rides et +19 % d'élasticité, plus de fibres de collagène.",
+            "detail": "Essai randomisé en double aveugle, 76 personnes, 633 et 830 nm. Lee et al., Journal of Photochemistry and Photobiology B, 2007.",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/17566756/"
+          }
+        },
+        "o4": {
+          "type": "source",
+          "settings": {
+            "claim": "8 femmes sur 10 satisfaites de leur visage.",
+            "detail": "Essai randomisé en double aveugle, 95 femmes de 45 à 60 ans, 660 nm. Bragato et al., Lasers in Medical Science, 2025.",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/40167796/"
+          }
+        },
+        "o5": {
+          "type": "source",
+          "settings": {
+            "claim": "Densité de collagène en hausse.",
+            "detail": "Essai contrôlé, 136 volontaires. Wunsch et Matuschka, Photomedicine and Laser Surgery, 2014.",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/24286286/"
+          }
+        },
+        "o6": {
+          "type": "source",
+          "settings": {
+            "claim": "Sûr et bien toléré.",
+            "detail": "Revue de 8 études sur les masques à domicile, 365 participants. Das et al., Aesthetic Plastic Surgery, 2026.",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/42875609/"
+          }
+        }
+      },
+      "block_order": [
+        "n1",
+        "n2",
+        "n3",
+        "o1",
+        "o2",
+        "o3",
+        "o4",
+        "o5",
+        "o6"
+      ]
+    },
+    "weeks": {
+      "type": "er-weeks",
+      "blocks": {
+        "t1": {
+          "type": "step",
+          "settings": {
+            "when": "Semaines 1 et 2",
+            "title": "Vous prenez le pli",
+            "text": "Rien ne se voit encore, et c'est normal : la lumière agit en profondeur. Prenez une photo le premier jour, toujours dans la même lumière."
+          }
+        },
+        "t2": {
+          "type": "step",
+          "settings": {
+            "when": "Vers 4 semaines",
+            "title": "Les premiers changements",
+            "text": "Dans les études, c'est à ce moment que les premiers changements commencent à se mesurer, à raison de trois à cinq séances par semaine."
+          }
+        },
+        "t3": {
+          "type": "step",
+          "settings": {
+            "when": "Vers 8 semaines",
+            "title": "Le moment de comparer vos photos",
+            "text": "Comparez avec votre photo du premier jour. Dans les études, les changements continuent de progresser jusqu'à douze à seize semaines."
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {
+        "title": "Ce que vous verrez,",
+        "title_accent": "semaine après semaine.",
+        "text": "La lumière rouge ne change rien en une nuit. C'est la régularité qui compte.",
+        "note": "Repères tirés des études publiées sur la lumière rouge. Les résultats varient d'une personne à l'autre."
+      }
+    },
+    "guarantee": {
+      "type": "er-guarantee",
+      "settings": {
+        "days": 30,
+        "title": "Essayez-le pendant 30 jours.",
+        "text": "<p>Utilisez le masque chez vous pendant un mois. S'il ne vous convient pas, écrivez-nous et renvoyez-le : nous vous remboursons. Ces 30 jours s'ajoutent aux 14 jours de rétractation prévus par la loi.</p>",
+        "link_label": "Lire la politique de retour"
+      }
+    },
+    "cta": {
+      "type": "er-cta",
+      "settings": {
+        "product": "masque-led-lumiere-rouge-visage-et-cou",
+        "title": "Ce soir, commencez votre rituel.",
+        "button_label": "Découvrir le masque, 249 €",
+        "note": "Appareil à usage esthétique, sans finalité médicale."
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "ritual",
+    "science",
+    "stats",
+    "weeks",
+    "guarantee",
+    "cta"
+  ]
+}
