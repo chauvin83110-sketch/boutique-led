@@ -27,7 +27,7 @@
         "c3": {
           "type": "check",
           "settings": {
-            "text": "Souple et sans fil : vous gardez les mains libres"
+            "text": "Souple et léger, il tient seul sur le visage"
           }
         },
         "c4": {
@@ -61,7 +61,7 @@
           "type": "detail",
           "settings": {
             "title": "Quand vais-je le recevoir ?",
-            "text": "<p>Entre 7 et 15 jours ouvrés après votre commande. La livraison est offerte. Vous recevez un numéro de suivi par e-mail dès que le colis part.</p>"
+            "text": "<p>Au plus tard 12 jours ouvrés après votre commande. La livraison est offerte. Vous recevez un numéro de suivi par e-mail dès que le colis part.</p>"
           }
         },
         "d2": {
@@ -112,11 +112,10 @@
         "step_1_text": "Vous commandez",
         "step_2_title": "Sous 1 à 3 jours",
         "step_2_text": "Votre colis part",
-        "step_3_title": "7 à 15 jours ouvrés",
+        "step_3_title": "Sous 12 jours ouvrés",
         "step_3_text": "Il arrive chez vous",
         "delivery_dates": true,
-        "delivery_min": 7,
-        "delivery_max": 15,
+        "delivery_max": 12,
         "sticky_title": "Masque LED Éclat Rubis",
         "sticky_note": "livraison offerte",
         "sticky_button": "Ajouter"
@@ -296,7 +295,7 @@
           "settings": {
             "icon": "hands",
             "title": "Les mains libres",
-            "text": "Il est souple et sans fil. Pendant la séance, vous faites ce que vous voulez."
+            "text": "Il est souple et tient seul sur le visage. Pendant la séance, vous pouvez lire ou vous détendre."
           }
         },
         "e4": {
@@ -577,7 +576,7 @@
           "type": "question",
           "settings": {
             "question": "Quand vais-je le recevoir ?",
-            "answer": "<p>Entre 7 et 15 jours ouvrés après votre commande. La livraison est offerte. Vous recevez un numéro de suivi par e-mail dès que le colis part.</p>"
+            "answer": "<p>Au plus tard 12 jours ouvrés après votre commande. La livraison est offerte. Vous recevez un numéro de suivi par e-mail dès que le colis part.</p>"
           }
         },
         "q6": {
